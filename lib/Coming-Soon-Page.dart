@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:timoti_project/Custom-UI/Custom-DefaultAppBar.dart';
-import 'package:timoti_project/Data-Class/ComingSoon.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Custom-UI/Custom-DefaultAppBar.dart';
+import '/Data-Class/ComingSoon.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class ComingSoonPage extends StatefulWidget {
   static const routeName = '/Coming-Soon-Page';
@@ -19,7 +19,8 @@ class _ComingSoonPageState extends State<ComingSoonPage> {
     WidgetSizeCalculation _widgetSize = WidgetSizeCalculation(context);
     DeviceDetails _deviceDetails = DeviceDetails(context);
 
-    final ComingSoonArgument data = ModalRoute.of(context)?.settings.arguments as ComingSoonArgument;
+    final ComingSoonArgument data =
+        ModalRoute.of(context)?.settings.arguments as ComingSoonArgument;
 
     return Scaffold(
       resizeToAvoidBottomInset: false,

@@ -3,13 +3,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:timoti_project/Account/AccountPage.dart';
-import 'package:timoti_project/Cart/CartPage.dart';
-import 'package:timoti_project/Home/HomePage.dart';
-import 'package:timoti_project/Message/MessagePage.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/Wallet/WalletPage.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Account/AccountPage.dart';
+import '/Cart/CartPage.dart';
+import '/Home/HomePage.dart';
+import '/Message/MessagePage.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/Wallet/WalletPage.dart';
+import '/enums/device-screen-type.dart';
 
 class Nav extends StatefulWidget {
   static const routeName = '/Nav';
@@ -140,12 +140,12 @@ class BottomAppBarState extends State<Nav> {
           Icon(
             Icons.home,
             color: Colors.white,
-            size:iconValue ,
+            size: iconValue,
           ),
           Icon(
             Icons.home,
             color: Theme.of(context).highlightColor,
-            size:iconValue ,
+            size: iconValue,
           ),
           iconValue,
           fontSizeValue,

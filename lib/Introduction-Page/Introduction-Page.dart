@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:timoti_project/Nav.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Nav.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
 class IntroductionPage extends StatefulWidget {
   static const routeName = '/Introduction-Page';

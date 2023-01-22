@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Home/HomePage.dart';
-import 'package:timoti_project/Nav.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Functions/Messager.dart';
+import '/Home/HomePage.dart';
+import '/Nav.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
 class WebDrawer extends StatelessWidget {
   final BottomAppBarState bottomAppBarState;

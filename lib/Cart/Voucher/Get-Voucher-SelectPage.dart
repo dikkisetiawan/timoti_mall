@@ -2,12 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Data-Class/VoucherDataClass.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/enums/VoucherType.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Data-Class/VoucherDataClass.dart';
+import '/Functions/Messager.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/enums/VoucherType.dart';
 
 /// Show Get Voucher Select Page
 class GetVoucherSelectPage extends StatefulWidget {

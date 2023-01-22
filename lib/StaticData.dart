@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:timoti_project/Data-Class/CategoriesDataClass.dart';
+import '/Data-Class/CategoriesDataClass.dart';
 
 class StaticData {
   static List<CategoriesData> categoryList = <CategoriesData>[];

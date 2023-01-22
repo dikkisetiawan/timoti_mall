@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 // import 'package:geocoder/geocoder.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:timoti_project/Address-Page/AddressClass.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Custom-UI/Custom-RoundedInputField.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Address-Page/AddressClass.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Custom-UI/Custom-RoundedInputField.dart';
+import '/Functions/Messager.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
 class AddressAddPage extends StatefulWidget {
   static const routeName = '/_AddressAddPage';
@@ -284,11 +284,11 @@ class _AddressAddPageState extends State<AddressAddPage> {
 
   /// First Name, Last name, Email, Password, Confirm Password
   Widget getRegisterUI(
-      DeviceDetails _deviceDetails,
-      WidgetSizeCalculation _widgetSize,
-      ) {
+    DeviceDetails _deviceDetails,
+    WidgetSizeCalculation _widgetSize,
+  ) {
     SizedBox spacing =
-    SizedBox(height: _widgetSize.getResponsiveWidth(0.07, 0.07, 0.07));
+        SizedBox(height: _widgetSize.getResponsiveWidth(0.07, 0.07, 0.07));
 
     return SizedBox(
       width: _widgetSize.getResponsiveWidth(0.8, 0.8, 0.8),
@@ -444,16 +444,17 @@ class _AddressAddPageState extends State<AddressAddPage> {
       height: _widgetSize.getResponsiveWidth(0.12, 0.12, 0.12),
       child: TextButton(
         style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                  ),
-                ),
-                backgroundColor:
-                    MaterialStateProperty.all(Theme.of(context).highlightColor),
-                elevation: MaterialStateProperty.all(5),
-                shadowColor: MaterialStateProperty.all(Theme.of(context).highlightColor),
-              ),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+          ),
+          backgroundColor:
+              MaterialStateProperty.all(Theme.of(context).highlightColor),
+          elevation: MaterialStateProperty.all(5),
+          shadowColor:
+              MaterialStateProperty.all(Theme.of(context).highlightColor),
+        ),
         onPressed: loading == true
             ? null
             : () {
@@ -638,7 +639,12 @@ class _AddressAddPageState extends State<AddressAddPage> {
               }
 
               /// Message
-              showMessage("", 'Address Saved', _deviceDetails,  context,);
+              showMessage(
+                "",
+                'Address Saved',
+                _deviceDetails,
+                context,
+              );
             });
           }
         }
@@ -679,7 +685,12 @@ class _AddressAddPageState extends State<AddressAddPage> {
           }
 
           /// Message
-          showMessage("", 'Address Saved', _deviceDetails,  context,);
+          showMessage(
+            "",
+            'Address Saved',
+            _deviceDetails,
+            context,
+          );
         });
         // endregion
       }
@@ -718,7 +729,12 @@ class _AddressAddPageState extends State<AddressAddPage> {
         setState(() {});
 
         /// Message
-        showMessage("", 'Address Saved', _deviceDetails,  context,);
+        showMessage(
+          "",
+          'Address Saved',
+          _deviceDetails,
+          context,
+        );
       });
       // endregion
     }
@@ -817,7 +833,12 @@ class _AddressAddPageState extends State<AddressAddPage> {
               setState(() {});
 
               /// Message
-              showMessage("", 'Address Updated', _deviceDetails,  context,);
+              showMessage(
+                "",
+                'Address Updated',
+                _deviceDetails,
+                context,
+              );
             });
           }
         }
@@ -856,7 +877,12 @@ class _AddressAddPageState extends State<AddressAddPage> {
           setState(() {});
 
           /// Message
-          showMessage("", 'Address Saved', _deviceDetails,  context,);
+          showMessage(
+            "",
+            'Address Saved',
+            _deviceDetails,
+            context,
+          );
         });
         // endregion
       }
@@ -895,7 +921,12 @@ class _AddressAddPageState extends State<AddressAddPage> {
         setState(() {});
 
         /// Message
-        showMessage("", 'Address Saved', _deviceDetails,  context,);
+        showMessage(
+          "",
+          'Address Saved',
+          _deviceDetails,
+          context,
+        );
       });
       // endregion
     }

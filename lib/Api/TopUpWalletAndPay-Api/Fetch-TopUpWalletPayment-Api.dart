@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/TopUpWalletAndPay-Api/TopUpWalletPaymentJSON.dart';
+import '/Api/TopUpWalletAndPay-Api/TopUpWalletPaymentJSON.dart';
 import 'dart:convert';
 
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<TopUpWalletPaymentJSON> fetchTopUpWalletPaymentApi(
   String token,

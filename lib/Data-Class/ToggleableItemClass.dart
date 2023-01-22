@@ -1,7 +1,7 @@
-import 'package:timoti_project/Custom-UI/Custom-ListTilePrice.dart';
-import 'package:timoti_project/Data-Class/ProductVariant.dart';
-import 'package:timoti_project/Data-Class/ShippingDataClass.dart';
-import 'package:timoti_project/Data-Class/VoucherDataClass.dart';
+import '/Custom-UI/Custom-ListTilePrice.dart';
+import '/Data-Class/ProductVariant.dart';
+import '/Data-Class/ShippingDataClass.dart';
+import '/Data-Class/VoucherDataClass.dart';
 
 class ToggleableItemClass {
   CustomListTilePrice? itemUI;

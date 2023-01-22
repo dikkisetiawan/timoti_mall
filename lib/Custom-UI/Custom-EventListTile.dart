@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Core/DateTime-Calculator.dart';
-import 'package:timoti_project/Custom-UI/Custom-ListTile.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Core/DateTime-Calculator.dart';
+import '/Custom-UI/Custom-ListTile.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
 class CustomEventListTile extends StatelessWidget {
   final CustomSubListTile? customsubListTile;

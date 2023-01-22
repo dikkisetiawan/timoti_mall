@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Url-Navigation/Routes.dart';
-import 'package:timoti_project/Url-Navigation/pages/About.dart';
-import 'package:timoti_project/Url-Navigation/pages/Help.dart';
-import 'package:timoti_project/Url-Navigation/pages/HomePage.dart';
-import 'package:timoti_project/Url-Navigation/pages/ProfilePage.dart';
-import 'package:timoti_project/Url-Navigation/pages/SettingsPage.dart';
+import '/Url-Navigation/Routes.dart';
+import '/Url-Navigation/pages/About.dart';
+import '/Url-Navigation/pages/Help.dart';
+import '/Url-Navigation/pages/HomePage.dart';
+import '/Url-Navigation/pages/ProfilePage.dart';
+import '/Url-Navigation/pages/SettingsPage.dart';
 
 class LandingPage extends StatefulWidget {
   final String pageName;

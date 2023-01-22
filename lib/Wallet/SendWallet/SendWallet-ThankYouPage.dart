@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class SendThankYouPage extends StatelessWidget {
   static const routeName = '/SendThankYouPage-Page';
@@ -27,7 +27,7 @@ class SendThankYouPage extends StatelessWidget {
             size: _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
           ),
         ),
-     backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).backgroundColor,
         shadowColor: Colors.grey,
         elevation: 3,
       ),

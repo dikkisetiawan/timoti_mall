@@ -1,4 +1,4 @@
-import 'package:timoti_project/Data-Class/ToggleableItemClass.dart';
+import '/Data-Class/ToggleableItemClass.dart';
 
 class CartCheckoutArgument {
   double totalPrice;

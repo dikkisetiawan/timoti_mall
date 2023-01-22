@@ -1,4 +1,4 @@
-import 'package:timoti_project/enums/VoucherType.dart';
+import '/enums/VoucherType.dart';
 
 class VoucherData {
   String voucherName;
@@ -28,7 +28,7 @@ class VoucherData {
     this.redeemQuantity = 0,
     this.tempRedeemQty = 0,
     this.isActive = false,
-    this.redeemEndTime  = '',
+    this.redeemEndTime = '',
     this.minOrder = 0,
     this.voucherValueType = VoucherValueType.Value,
     this.voucherPercentage = 0,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:timoti_project/Core/auth.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Phone-Auth/PhoneAuthRegister-Step1.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Core/auth.dart';
+import '/Functions/Messager.dart';
+import '/Phone-Auth/PhoneAuthRegister-Step1.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class ChangePhoneNumberStepTwo extends StatefulWidget {
   static const routeName = "/ChangePhoneNumberStepTwo";
@@ -13,8 +13,8 @@ class ChangePhoneNumberStepTwo extends StatefulWidget {
   String verificationId;
 
   ChangePhoneNumberStepTwo({
-     this.phoneNumber = '',
-     this.verificationId = '',
+    this.phoneNumber = '',
+    this.verificationId = '',
   });
   @override
   _ChangePhoneNumberStepTwoState createState() =>
@@ -124,7 +124,7 @@ class _ChangePhoneNumberStepTwoState extends State<ChangePhoneNumberStepTwo> {
     };
 
     final PhoneVerificationFailed verificationFailed =
-        (FirebaseAuthException  authException) {
+        (FirebaseAuthException authException) {
       if (mounted)
         setState(() {
           status =
@@ -208,15 +208,26 @@ class _ChangePhoneNumberStepTwoState extends State<ChangePhoneNumberStepTwo> {
           },
         );
       }).catchError((error) {
-        showMessage('', error.message, _deviceDetails,  context,);
+        showMessage(
+          '',
+          error.message,
+          _deviceDetails,
+          context,
+        );
       });
     } on PlatformException catch (error) {
-      showMessage('', error.message, _deviceDetails,  context,);
+      showMessage(
+        '',
+        error.message,
+        _deviceDetails,
+        context,
+      );
     }
   }
 
   void showSnackbar(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(message)));
   }
   // endregion
 
@@ -227,7 +238,6 @@ class _ChangePhoneNumberStepTwoState extends State<ChangePhoneNumberStepTwo> {
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-
       appBar: AppBar(
         leading: InkWell(
           onTap: () {
@@ -236,7 +246,7 @@ class _ChangePhoneNumberStepTwoState extends State<ChangePhoneNumberStepTwo> {
               new MaterialPageRoute(
                 builder: (BuildContext context) =>
                     PhoneAuthRegisterStepOneScreen(
-                      singlePage: false,
+                  singlePage: false,
                 ),
                 fullscreenDialog: true,
               ),

@@ -1,48 +1,55 @@
+import '/enums/Sign-In-Type.dart';
 
-import 'package:timoti_project/enums/Sign-In-Type.dart';
-
-SignInType convertStringToSignInType(String data){
+SignInType convertStringToSignInType(String data) {
   /// Google
-  if(data == 'google.com'){
+  if (data == 'google.com') {
     return SignInType.Google;
   }
+
   /// Facebook
-  else if(data == 'facebook.com'){
+  else if (data == 'facebook.com') {
     return SignInType.Facebook;
   }
+
   /// Phone
-  else if(data == 'phone') {
+  else if (data == 'phone') {
     return SignInType.Phone;
   }
+
   /// Password
-  else if(data == 'password'){
+  else if (data == 'password') {
     return SignInType.Password;
   }
+
   /// Invalid String Data
-  else{
+  else {
     return SignInType.Null;
   }
 }
 
-String convertSignInTypeToString(SignInType data){
+String convertSignInTypeToString(SignInType data) {
   /// Google
-  if(data == SignInType.Google){
+  if (data == SignInType.Google) {
     return 'Google';
   }
+
   /// Facebook
-  else if(data == SignInType.Facebook){
+  else if (data == SignInType.Facebook) {
     return 'Facebook';
   }
+
   /// Phone
-  else if(data == SignInType.Phone) {
+  else if (data == SignInType.Phone) {
     return 'Phone';
   }
+
   /// Password
-  else if(data == SignInType.Password){
+  else if (data == SignInType.Password) {
     return 'Password';
   }
+
   /// Invalid String Data
-  else{
+  else {
     return 'ERROR';
   }
 }

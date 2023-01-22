@@ -1,7 +1,7 @@
 // import 'package:firebase_image/firebase_image.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Core/DateTime-Calculator.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Core/DateTime-Calculator.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 import '../Screen-Size/WidgetSizeCalculation.dart';
 
 class CustomListTile extends StatelessWidget {

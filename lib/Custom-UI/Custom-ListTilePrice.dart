@@ -4,8 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Data-Class/ProductVariant.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Data-Class/ProductVariant.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 import '../Screen-Size/WidgetSizeCalculation.dart';
 
 class CustomListTilePrice extends StatelessWidget {

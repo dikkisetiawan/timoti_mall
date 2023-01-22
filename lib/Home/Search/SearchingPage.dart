@@ -2,12 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Data-Class/ProductDetailsArgument.dart';
-import 'package:timoti_project/Home/Product-Details-Page.dart';
-import 'package:timoti_project/Nav.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Data-Class/ProductDetailsArgument.dart';
+import '/Home/Product-Details-Page.dart';
+import '/Nav.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
 class SearchingPage extends StatelessWidget {
@@ -126,9 +126,9 @@ class _RecommendResultState extends State<RecommendResult> {
     List<Widget> chipList = [];
 
     for (int i = 0; i < productList.length; ++i) {
-        if (productList[i].productName != '') {
-          chipList.add(chipUI(productList[i]));
-        }
+      if (productList[i].productName != '') {
+        chipList.add(chipUI(productList[i]));
+      }
     }
 
     return chipList;
@@ -296,7 +296,7 @@ class SearchField extends StatefulWidget {
   final BottomAppBarState bottomAppBarState;
 
   SearchField({
-    required  this.widgetSize,
+    required this.widgetSize,
     required this.deviceDetails,
     this.userPosition,
     required this.bottomAppBarState,
@@ -356,7 +356,8 @@ class _SearchFieldState extends State<SearchField> {
                 itemCount: searchResult.length,
                 itemBuilder: (context, index) {
                   /// Assign Data
-                  Map<String, dynamic> searchResultMapData = searchResult[index].data() as Map<String, dynamic>;
+                  Map<String, dynamic> searchResultMapData =
+                      searchResult[index].data() as Map<String, dynamic>;
 
                   if (index == searchResult.length - 1) {
                     Column(
@@ -375,15 +376,17 @@ class _SearchFieldState extends State<SearchField> {
                               /// Product Image
                               List<String> urlListData = <String>[];
 
-                              if (searchResultMapData["Product_Images_Object"] !=
+                              if (searchResultMapData[
+                                      "Product_Images_Object"] !=
                                   null) {
                                 for (int index = 0;
                                     index <
-                                        searchResultMapData["Product_Images_Object"]
+                                        searchResultMapData[
+                                                "Product_Images_Object"]
                                             .length;
                                     ++index) {
-                                  urlListData.add(searchResultMapData["Product_Images_Object"][index]
-                                      ["url"]);
+                                  urlListData.add(searchResultMapData[
+                                      "Product_Images_Object"][index]["url"]);
                                 }
 
                                 // print(urlListData[0]);
@@ -392,10 +395,11 @@ class _SearchFieldState extends State<SearchField> {
                               ProductDetailsArgument data =
                                   new ProductDetailsArgument(
                                 urlList: urlListData,
-                                    priceString: searchResultMapData["Final_Price"],
+                                priceString: searchResultMapData["Final_Price"],
                                 productBaseID:
                                     searchResultMapData['Product_ID_Base'],
-                                productDescription: searchResultMapData["Product_Description"],
+                                productDescription:
+                                    searchResultMapData["Product_Description"],
                                 productName:
                                     searchResultMapData["Product_Name"],
                                 userPosition: widget.userPosition,
@@ -429,7 +433,8 @@ class _SearchFieldState extends State<SearchField> {
                             subtitle: Text(
                               "RM " +
                                   formatCurrency
-                                      .format(double.parse(searchResultMapData["Final_Price"]))
+                                      .format(double.parse(
+                                          searchResultMapData["Final_Price"]))
                                       .toString(),
                               style: TextStyle(
                                 fontSize:
@@ -465,7 +470,9 @@ class _SearchFieldState extends State<SearchField> {
                                   searchResultMapData["Product_Images_Object"]
                                       .length;
                               ++index) {
-                            urlListData.add(searchResultMapData["Product_Images_Object"][index]["url"]);
+                            urlListData.add(
+                                searchResultMapData["Product_Images_Object"]
+                                    [index]["url"]);
                           }
 
                           // print(urlListData[0]);
@@ -475,8 +482,7 @@ class _SearchFieldState extends State<SearchField> {
                             new ProductDetailsArgument(
                           urlList: urlListData,
                           priceString: searchResultMapData["Final_Price"],
-                          productBaseID:
-                              searchResultMapData['Product_ID_Base'],
+                          productBaseID: searchResultMapData['Product_ID_Base'],
                           productDescription:
                               searchResultMapData["Product_Description"],
                           productName: searchResultMapData["Product_Name"],
@@ -566,7 +572,8 @@ class _SearchFieldState extends State<SearchField> {
 
       for (int i = 0; i < querySnapshot.docs.length; ++i) {
         /// Assign Data
-        querySnapshotMapData = querySnapshot.docs[i].data() as Map<String, dynamic>;
+        querySnapshotMapData =
+            querySnapshot.docs[i].data() as Map<String, dynamic>;
 
         if (querySnapshotMapData["Product_Is_Published"] != null) {
           if (querySnapshotMapData["Product_Is_Published"] == "1") {
@@ -580,14 +587,13 @@ class _SearchFieldState extends State<SearchField> {
       Map<String, dynamic> tempMapData = Map<String, dynamic>();
 
       /// Remove Duplicate
-      final ids = searchResult.map((e){
-
+      final ids = searchResult.map((e) {
         /// Assign Data
         tempMapData = e.data() as Map<String, dynamic>;
 
         return tempMapData["Product_ID_Base"];
       }).toSet();
-      searchResult.retainWhere((x){
+      searchResult.retainWhere((x) {
         /// Assign Data
         tempMapData = x.data() as Map<String, dynamic>;
 
@@ -667,12 +673,14 @@ class _SearchFieldState extends State<SearchField> {
     if (querySnapshot.docs.length > 0) {
       /// Get last document
       lastDocument = querySnapshot.docs[querySnapshot.docs.length - 1];
+
       /// Define Query Map Data
       Map<String, dynamic> querySnapshotMapData = Map<String, dynamic>();
 
       for (int i = 0; i < querySnapshot.docs.length; ++i) {
         /// Assign Data
-        querySnapshotMapData = querySnapshot.docs[i].data() as Map<String, dynamic>;
+        querySnapshotMapData =
+            querySnapshot.docs[i].data() as Map<String, dynamic>;
         if (querySnapshotMapData["Product_Is_Published"] != null) {
           if (querySnapshotMapData["Product_Is_Published"] == "1") {
             searchResult.add(querySnapshot.docs[i]);
@@ -685,14 +693,13 @@ class _SearchFieldState extends State<SearchField> {
       Map<String, dynamic> tempMapData = Map<String, dynamic>();
 
       /// Remove Duplicate
-      final ids = searchResult.map((e){
-
+      final ids = searchResult.map((e) {
         /// Assign Data
         tempMapData = e.data() as Map<String, dynamic>;
 
         return tempMapData["Product_ID_Base"];
       }).toSet();
-      searchResult.retainWhere((x){
+      searchResult.retainWhere((x) {
         /// Assign Data
         tempMapData = x.data() as Map<String, dynamic>;
 

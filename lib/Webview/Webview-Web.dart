@@ -3,10 +3,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:timoti_project/Cart/Order-Completed-Page.dart';
-import 'package:timoti_project/Cart/Payment-Failed-Page.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Test-Runner.dart';
+import '/Cart/Order-Completed-Page.dart';
+import '/Cart/Payment-Failed-Page.dart';
+import '/Functions/Messager.dart';
+import '/Test-Runner.dart';
 import 'dart:ui' as ui;
 
 import 'package:webviewx/webviewx.dart';

@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/CheckPhoneExist-Api/CheckPhoneResultJSON.dart';
+import '/Api/CheckPhoneExist-Api/CheckPhoneResultJSON.dart';
 import 'dart:convert';
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<CheckPhoneResultJSON> fetchCheckPhoneApi(
   String phoneNumber,

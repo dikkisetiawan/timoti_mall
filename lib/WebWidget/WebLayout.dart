@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Nav.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/WebWidget/WebAppbar.dart';
-import 'package:timoti_project/WebWidget/WebCategories.dart';
+import '/Nav.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/WebWidget/WebAppbar.dart';
+import '/WebWidget/WebCategories.dart';
 
 class WebDesktopLayout extends StatefulWidget {
   /// Main Content UI

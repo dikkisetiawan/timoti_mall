@@ -1,6 +1,6 @@
-import 'package:timoti_project/Address-Page/AddressClass.dart';
-import 'package:timoti_project/Data-Class/OrderDetailClass.dart';
-import 'package:timoti_project/enums/OrderHistoryType.dart';
+import '/Address-Page/AddressClass.dart';
+import '/Data-Class/OrderDetailClass.dart';
+import '/enums/OrderHistoryType.dart';
 
 class OrderHistoryClass {
   /// Customer Details
@@ -31,6 +31,7 @@ class OrderHistoryClass {
   String branchName;
 
   String deliveryType;
+
   /// Order Details (Products)
   List<OrderDetailsClass> orderDetailsList;
 

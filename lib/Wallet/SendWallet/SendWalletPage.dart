@@ -3,16 +3,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Api/CheckPhoneExist-Api/Fetch-CheckPhoneExist-Api.dart';
-import 'package:timoti_project/Api/CustomerToken-Api/Fetch-GetToken-Api.dart';
-import 'package:timoti_project/Api/SendWallet-Api/Fetch-SendWallet-Api.dart';
-import 'package:timoti_project/CheckInternet/CheckInternetFunction.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/Wallet/SendWallet/SendWallet-ThankYouPage.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Api/CheckPhoneExist-Api/Fetch-CheckPhoneExist-Api.dart';
+import '/Api/CustomerToken-Api/Fetch-GetToken-Api.dart';
+import '/Api/SendWallet-Api/Fetch-SendWallet-Api.dart';
+import '/CheckInternet/CheckInternetFunction.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/Wallet/SendWallet/SendWallet-ThankYouPage.dart';
+import '/enums/device-screen-type.dart';
 import 'package:string_validator/string_validator.dart';
 
 class SendWalletPage extends StatefulWidget {

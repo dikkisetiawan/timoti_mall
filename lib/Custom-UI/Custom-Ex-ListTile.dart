@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Core/DateTime-Calculator.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Core/DateTime-Calculator.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class CustomExListTile extends StatelessWidget {
   final String trailingText;
@@ -72,8 +72,8 @@ class CustomExListTile extends StatelessWidget {
 
   DateTime getStartDate() {
     var targetDate = DateTime.now();
-    targetDate =
-        dateTimeCalculator?.getDate(dateYear, dateMonth, dateDay, hour, minute) as DateTime;
+    targetDate = dateTimeCalculator?.getDate(
+        dateYear, dateMonth, dateDay, hour, minute) as DateTime;
 
     return targetDate;
   }
@@ -169,7 +169,9 @@ class CustomExListTile extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
                 child: Text(
-                  DateFormat(dateFormat).format(dateTime as DateTime).toString(),
+                  DateFormat(dateFormat)
+                      .format(dateTime as DateTime)
+                      .toString(),
                   style: TextStyle(
                     color: dateColor,
                     fontSize: _deviceDetails.getNormalFontSize() - 3,

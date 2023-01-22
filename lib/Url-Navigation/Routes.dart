@@ -1,7 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Url-Navigation/LandingPage.dart';
-import 'package:timoti_project/Url-Navigation/SplashScreen.dart';
+import '/Url-Navigation/LandingPage.dart';
+import '/Url-Navigation/SplashScreen.dart';
 
 class MyFluroRouterClass {
   static final FluroRouter router = FluroRouter();
@@ -40,7 +40,7 @@ class MyFluroRouterClass {
   static Handler _pageParamHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) =>
         LandingPage(
-          pageName: params['pageName']![0],
+      pageName: params['pageName']![0],
       detailsPageName: params['pageParam']![0],
     ),
   );

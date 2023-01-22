@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class PaymentFailedPage extends StatelessWidget {
   final List<String> orderIDs;
-  
+
   const PaymentFailedPage({
     Key? key,
     required this.orderIDs,
@@ -75,7 +75,6 @@ class PaymentFailedPage extends StatelessWidget {
       SizedBox(height: _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05)),
     );
 
-
     /// Payment Failed Title
     pageContent.add(
       Padding(
@@ -96,7 +95,7 @@ class PaymentFailedPage extends StatelessWidget {
       Padding(
         padding: EdgeInsets.only(bottom: 8.0),
         child: Text(
-         'Please try again later',
+          'Please try again later',
           style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontSize: _deviceDetails.getNormalFontSize(),

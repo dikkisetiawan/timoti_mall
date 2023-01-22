@@ -1,4 +1,4 @@
-import 'package:timoti_project/enums/AddressType.dart';
+import '/enums/AddressType.dart';
 
 class AddressArgument {
   AddressType addressType;

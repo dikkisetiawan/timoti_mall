@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:timoti_project/Home/SelectAddress/SelectMapResult.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Home/SelectAddress/SelectMapResult.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class SelectGoogleMapPage extends StatefulWidget {
   final LatLng? initLatLong;
@@ -212,7 +212,7 @@ class SelectGoogleMapPageState extends State<SelectGoogleMapPage> {
                                 x: MediaQuery.of(context).size.width.toInt(),
                                 y: MediaQuery.of(context).size.height.toInt()))
                             .then((pos) async {
-                              /// Todo Translate Coordinate to Address
+                          /// Todo Translate Coordinate to Address
                           // final coordinates =
                           //     Coordinates(pos.latitude, pos.longitude);
                           // var addresses = await Geocoder.local
@@ -232,7 +232,9 @@ class SelectGoogleMapPageState extends State<SelectGoogleMapPage> {
                         target: widget.initLatLong != null
                             ? widget.initLatLong as LatLng
                             : defaultLatLng,
-                        zoom: widget.initLatLong != null ? 20.151926040649414 : 17.00,
+                        zoom: widget.initLatLong != null
+                            ? 20.151926040649414
+                            : 17.00,
                       ),
                       onMapCreated: (GoogleMapController controller) {
                         _googleMapController = controller;

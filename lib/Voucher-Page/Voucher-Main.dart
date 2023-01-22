@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-All.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-Cancelled.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-Refund.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-RequestCancelRefund.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-ToPay.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-ToRate.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-ToReceive.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-ToShip.dart';
-import 'package:timoti_project/Data-Class/InitialTabArgument.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Voucher-Page/Available-VoucherPage.dart';
-import 'package:timoti_project/Voucher-Page/Collected-VoucherPage.dart';
+import '/Account/PurchaseHistory/Purchase-All.dart';
+import '/Account/PurchaseHistory/Purchase-Cancelled.dart';
+import '/Account/PurchaseHistory/Purchase-Refund.dart';
+import '/Account/PurchaseHistory/Purchase-RequestCancelRefund.dart';
+import '/Account/PurchaseHistory/Purchase-ToPay.dart';
+import '/Account/PurchaseHistory/Purchase-ToRate.dart';
+import '/Account/PurchaseHistory/Purchase-ToReceive.dart';
+import '/Account/PurchaseHistory/Purchase-ToShip.dart';
+import '/Data-Class/InitialTabArgument.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Voucher-Page/Available-VoucherPage.dart';
+import '/Voucher-Page/Collected-VoucherPage.dart';
 
 class VoucherMain extends StatefulWidget {
   @override

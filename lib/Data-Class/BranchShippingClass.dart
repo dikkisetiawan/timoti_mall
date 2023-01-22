@@ -1,4 +1,4 @@
-import 'package:timoti_project/Data-Class/ShippingDataClass.dart';
+import '/Data-Class/ShippingDataClass.dart';
 
 class BranchShippingOption {
   String branchName;

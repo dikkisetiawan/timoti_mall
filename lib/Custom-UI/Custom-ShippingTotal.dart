@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class CustomShippingTotal extends StatelessWidget {
   final WidgetSizeCalculation widgetSize;
@@ -32,13 +32,13 @@ class CustomShippingTotal extends StatelessWidget {
       width: widgetSize.getResponsiveWidth(1, 1, 1),
       decoration: BoxDecoration(
         color: Theme.of(context).shadowColor,
-                    border: Border(
-                      bottom: BorderSide(
-                        width: 0.7,
-                        color: Theme.of(context).dividerColor,
-                      ),
-                    ),
-                  ),
+        border: Border(
+          bottom: BorderSide(
+            width: 0.7,
+            color: Theme.of(context).dividerColor,
+          ),
+        ),
+      ),
       padding: EdgeInsets.fromLTRB(
         widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
         widgetSize.getResponsiveWidth(0.03, 0.03, 0.03),
@@ -144,23 +144,23 @@ class CustomShippingTotal extends StatelessWidget {
           /// Total Discount
           if (totalDiscount != '0')
             Padding(
-            padding: const EdgeInsets.only(bottom: 5.0),
-            child: SizedBox(
-              width: widgetSize.getResponsiveWidth(0.55, 0.55, 0.55),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  /// Total Discount
-                  Expanded(
-                    child: Text(
-                      "Total Discount",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: deviceDetails.getNormalFontSize(),
-                        color: Theme.of(context).primaryColor,
+              padding: const EdgeInsets.only(bottom: 5.0),
+              child: SizedBox(
+                width: widgetSize.getResponsiveWidth(0.55, 0.55, 0.55),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    /// Total Discount
+                    Expanded(
+                      child: Text(
+                        "Total Discount",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: deviceDetails.getNormalFontSize(),
+                          color: Theme.of(context).primaryColor,
+                        ),
                       ),
                     ),
-                  ),
 
                     Expanded(
                       child: Text(
@@ -176,10 +176,10 @@ class CustomShippingTotal extends StatelessWidget {
                         ),
                       ),
                     ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
 
           /// Total Price
           SizedBox(

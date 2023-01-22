@@ -2,18 +2,18 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:timoti_project/Core/auth.dart';
-import 'package:timoti_project/Data-Class/PhoneAuthStepTwoArgument.dart';
-import 'package:timoti_project/Introduction-Page/Introduction-Page.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Nav.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Core/auth.dart';
+import '/Data-Class/PhoneAuthStepTwoArgument.dart';
+import '/Introduction-Page/Introduction-Page.dart';
+import '/Functions/Messager.dart';
+import '/Nav.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/enums/Sign-In-Type.dart';
-import 'package:timoti_project/enums/User-Sign-In-Method.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/enums/Sign-In-Type.dart';
+import '/enums/User-Sign-In-Method.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +28,6 @@ class PhoneAuthLoginStepTwoScreen extends StatefulWidget {
 class _PhoneAuthLoginStepTwoScreenState
     extends State<PhoneAuthLoginStepTwoScreen> {
   String countryNo = '';
-
 
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
 
@@ -99,7 +98,7 @@ class _PhoneAuthLoginStepTwoScreenState
     if (await File(cacheDir.path + "/" + cacheSignInMethod).exists()) {
       print("Cache File Exist: " + cacheSignInMethod);
       Navigator.pop(context);
-      Navigator.pushReplacementNamed (
+      Navigator.pushReplacementNamed(
         context,
         Nav.routeName,
         // arguments: navBarGlobalKey,
@@ -110,7 +109,7 @@ class _PhoneAuthLoginStepTwoScreenState
     else {
       print("No Cache data");
       Navigator.pop(context);
-      Navigator.pushReplacementNamed (
+      Navigator.pushReplacementNamed(
         context,
         IntroductionPage.routeName,
         // arguments: navBarGlobalKey,
@@ -256,12 +255,18 @@ class _PhoneAuthLoginStepTwoScreenState
       loginPath();
       // showSnackbar("Successfully signed in UID: ${user.uid}");
     } on PlatformException catch (error) {
-      showMessage('', error.message, _deviceDetails,  context,);
+      showMessage(
+        '',
+        error.message,
+        _deviceDetails,
+        context,
+      );
     }
   }
 
   void showSnackbar(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(message)));
   }
   // endregion
 
@@ -288,7 +293,7 @@ class _PhoneAuthLoginStepTwoScreenState
           "Phone Authentication",
           style: TextStyle(color: Theme.of(context).primaryColor),
         ),
-     backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).backgroundColor,
         shadowColor: Colors.grey,
         elevation: 3,
       ),

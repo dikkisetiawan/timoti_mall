@@ -3,9 +3,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:timoti_project/Core/DateTime-Calculator.dart';
-import 'package:timoti_project/Data-Class/ProductVariant.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Core/DateTime-Calculator.dart';
+import '/Data-Class/ProductVariant.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 import '../Screen-Size/WidgetSizeCalculation.dart';
 
 class CustomCheckOutUI extends StatelessWidget {

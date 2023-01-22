@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import 'package:timoti_project/Custom-UI/Custom-Ex-ListTile.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Custom-UI/Custom-Ex-ListTile.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
 class MessagePage extends StatefulWidget {
   static const routeName = '/Message-Page';
@@ -183,7 +183,8 @@ class _MessagePageState extends State<MessagePage> {
     if (message.length > 0) {
       for (int i = 0; i < message.length; ++i) {
         /// Assign Data
-        Map<String, dynamic> messageMapData = message[i].data() as Map<String, dynamic>;
+        Map<String, dynamic> messageMapData =
+            message[i].data() as Map<String, dynamic>;
 
         pageContent.add(
           Ink(

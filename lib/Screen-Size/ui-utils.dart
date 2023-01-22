@@ -1,6 +1,5 @@
-
 import 'package:flutter/widgets.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/enums/device-screen-type.dart';
 
 DeviceScreenType getDeviceType(MediaQueryData mediaQuery) {
   var orientation = mediaQuery.orientation;
@@ -22,7 +21,7 @@ DeviceScreenType getDeviceType(MediaQueryData mediaQuery) {
 
   // if (deviceWidth >= 600) {
   if (deviceWidth >= 800) {
-  // print("Tablet Size");
+    // print("Tablet Size");
     return DeviceScreenType.Tablet;
   }
   // print("Mobile Size");

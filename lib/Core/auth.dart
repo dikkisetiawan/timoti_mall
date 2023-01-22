@@ -7,10 +7,10 @@ import 'package:intl/intl.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Functions/ConvertToSignInType.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/enums/Sign-In-Type.dart';
+import '/Functions/ConvertToSignInType.dart';
+import '/Functions/Messager.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/enums/Sign-In-Type.dart';
 
 class AuthService {
   // Dependencies

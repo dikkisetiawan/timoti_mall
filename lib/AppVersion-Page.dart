@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Custom-UI/Custom-Ex-ListTile.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
-import 'package:timoti_project/main.dart';
+import '/Custom-UI/Custom-Ex-ListTile.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
+import '/main.dart';
 
 class AppVersionPage extends StatefulWidget {
   static const routeName = '/AppVersion-Page';

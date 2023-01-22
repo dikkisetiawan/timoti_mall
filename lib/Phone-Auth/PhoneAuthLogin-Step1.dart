@@ -1,14 +1,14 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Data-Class/PhoneAuthStepTwoArgument.dart';
-import 'package:timoti_project/Login-Register-Page/LoginPage.dart';
-import 'package:timoti_project/Phone-Auth/PhoneAuthLogin-Step2.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Data-Class/PhoneAuthStepTwoArgument.dart';
+import '/Login-Register-Page/LoginPage.dart';
+import '/Phone-Auth/PhoneAuthLogin-Step2.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class PhoneAuthLoginStepOneScreen extends StatefulWidget {
   static const routeName = "/PhoneAuthLoginStep1";
@@ -153,7 +153,7 @@ class _PhoneAuthLoginStepOneScreenState
           verificationId: _verificationId,
         );
 
-        Navigator.popAndPushNamed (
+        Navigator.popAndPushNamed(
           context,
           PhoneAuthLoginStepTwoScreen.routeName,
           arguments: arg,
@@ -196,7 +196,7 @@ class _PhoneAuthLoginStepOneScreenState
             verificationId: "11111111",
           );
 
-          Navigator.popAndPushNamed (
+          Navigator.popAndPushNamed(
             context,
             PhoneAuthLoginStepTwoScreen.routeName,
             arguments: arg,
@@ -235,7 +235,7 @@ class _PhoneAuthLoginStepOneScreenState
           "Phone Authentication",
           style: TextStyle(color: Theme.of(context).primaryColor),
         ),
-     backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).backgroundColor,
         shadowColor: Colors.grey,
         elevation: 3,
       ),

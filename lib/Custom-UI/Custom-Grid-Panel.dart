@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 import '../Screen-Size/WidgetSizeCalculation.dart';
 
 class CustomGridPanel extends StatelessWidget {

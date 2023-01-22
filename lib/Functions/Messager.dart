@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Login-Register-Page/LoginPage.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Login-Register-Page/LoginPage.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 
 /// Show Custom message
 void showMessage(

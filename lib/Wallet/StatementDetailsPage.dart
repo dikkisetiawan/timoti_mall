@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class StatementDetails extends StatelessWidget {
   final formatCurrency = new NumberFormat.currency(
@@ -127,7 +127,7 @@ class StatementDetails extends StatelessWidget {
             /// Top Up
             if (Statement_Type == "Top Up")
               Text(
-                Statement_Payment_Method as String ,
+                Statement_Payment_Method as String,
                 style: TextStyle(
                     fontSize: _deviceDetails.getNormalFontSize(),
                     color: Theme.of(context).primaryColor,
@@ -463,7 +463,9 @@ class StatementDetails extends StatelessWidget {
     if (Statement_Type == "Top Up") {
       return Text(
         "MYR " +
-            formatCurrency.format(double.parse(Statement_Amount as String)).toString(),
+            formatCurrency
+                .format(double.parse(Statement_Amount as String))
+                .toString(),
         style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontWeight: FontWeight.bold,
@@ -475,7 +477,9 @@ class StatementDetails extends StatelessWidget {
     else if (Statement_Type == "Send") {
       return Text(
         "MYR -" +
-            formatCurrency.format(double.parse(Statement_Amount as String)).toString(),
+            formatCurrency
+                .format(double.parse(Statement_Amount as String))
+                .toString(),
         style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontWeight: FontWeight.bold,
@@ -487,7 +491,9 @@ class StatementDetails extends StatelessWidget {
     else if (Statement_Type == "Receive") {
       return Text(
         "MYR " +
-            formatCurrency.format(double.parse(Statement_Amount as String)).toString(),
+            formatCurrency
+                .format(double.parse(Statement_Amount as String))
+                .toString(),
         style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontWeight: FontWeight.bold,
@@ -499,7 +505,9 @@ class StatementDetails extends StatelessWidget {
     else if (Statement_Type == "Refund") {
       return Text(
         "MYR " +
-            formatCurrency.format(double.parse(Statement_Amount as String)).toString(),
+            formatCurrency
+                .format(double.parse(Statement_Amount as String))
+                .toString(),
         style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontWeight: FontWeight.bold,
@@ -511,7 +519,9 @@ class StatementDetails extends StatelessWidget {
     else {
       return Text(
         "MYR -" +
-            formatCurrency.format(double.parse(Statement_Amount as String)).toString(),
+            formatCurrency
+                .format(double.parse(Statement_Amount as String))
+                .toString(),
         style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontWeight: FontWeight.bold,
@@ -543,7 +553,7 @@ class StatementDetails extends StatelessWidget {
           "Transaction Details",
           style: TextStyle(color: Theme.of(context).primaryColor),
         ),
-     backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).backgroundColor,
         shadowColor: Colors.grey,
         elevation: 3,
       ),

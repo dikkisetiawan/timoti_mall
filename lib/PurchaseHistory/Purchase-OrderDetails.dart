@@ -4,12 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Custom-UI/Custom-CheckOutUI.dart';
-import 'package:timoti_project/Data-Class/OrderHistoryClass.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/enums/OrderHistoryType.dart';
+import '/Custom-UI/Custom-CheckOutUI.dart';
+import '/Data-Class/OrderHistoryClass.dart';
+import '/Functions/Messager.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/enums/OrderHistoryType.dart';
 
 class OrderDetailsPage extends StatefulWidget {
   static const routeName = '/Order-Details-Page';

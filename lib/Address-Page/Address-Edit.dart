@@ -4,15 +4,15 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:timoti_project/Address-Page/AddressClass.dart';
-import 'package:timoti_project/Address-Page/AddressEditArgument.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Custom-UI/Custom-RoundedInputField.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Address-Page/AddressClass.dart';
+import '/Address-Page/AddressEditArgument.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Custom-UI/Custom-RoundedInputField.dart';
+import '/Functions/Messager.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
 class AddressEditPage extends StatefulWidget {
   static const routeName = '/_AddressEditPage';

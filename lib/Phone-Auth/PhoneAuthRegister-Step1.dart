@@ -1,19 +1,18 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Introduction-Page/Introduction-Page.dart';
-import 'package:timoti_project/Phone-Auth/PhoneAuthRegister-Step2.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Introduction-Page/Introduction-Page.dart';
+import '/Phone-Auth/PhoneAuthRegister-Step2.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/enums/Sign-In-Type.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/enums/Sign-In-Type.dart';
 
 class PhoneAuthRegisterStepOneScreen extends StatelessWidget {
   static const routeName = "/PhoneAuthRegisterStep1";
   final bool singlePage;
-
 
   PhoneAuthRegisterStepOneScreen({
     required this.singlePage,
@@ -91,7 +90,7 @@ class PhoneAuthRegisterStepOneScreen extends StatelessWidget {
                                 // }
                               });
 
-                              Navigator.pushReplacementNamed (
+                              Navigator.pushReplacementNamed(
                                 context,
                                 IntroductionPage.routeName,
                                 // arguments: navBarGlobalKey,

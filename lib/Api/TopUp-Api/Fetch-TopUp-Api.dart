@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/TopUp-Api/Top-Up-JSON.dart';
+import '/Api/TopUp-Api/Top-Up-JSON.dart';
 import 'dart:convert';
 
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<TopUpJSON> fetchTopUpApi(
   String token,

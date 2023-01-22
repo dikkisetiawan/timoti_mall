@@ -4,13 +4,13 @@ import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:timoti_project/Custom-UI/Custom-RoundedInputField.dart';
+import '/Custom-UI/Custom-RoundedInputField.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Functions/Messager.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
 class ChangeEmail extends StatefulWidget {
   static const routeName = '/ChangeEmail';
@@ -121,7 +121,6 @@ class _ChangeEmailState extends State<ChangeEmail> {
             _widgetSize,
             null,
             null,
-
           ),
 
           /// Old Password
@@ -245,8 +244,8 @@ class _ChangeEmailState extends State<ChangeEmail> {
             '',
             "Successfully updated your email",
             _deviceDetails,
-             context,
-                );
+            context,
+          );
         }).catchError((error) {
           _loading = false;
           setState(() {});
@@ -254,8 +253,8 @@ class _ChangeEmailState extends State<ChangeEmail> {
             '',
             error.message,
             _deviceDetails,
-             context,
-                );
+            context,
+          );
         });
       },
     ).catchError((error) {
@@ -265,7 +264,7 @@ class _ChangeEmailState extends State<ChangeEmail> {
         '',
         error.message,
         _deviceDetails,
-         context,
+        context,
       );
     });
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class QrRequestPage extends StatelessWidget {
@@ -10,8 +10,8 @@ class QrRequestPage extends StatelessWidget {
   final String userfullname;
 
   QrRequestPage({
-     this.uid = '',
-     this.userfullname = '',
+    this.uid = '',
+    this.userfullname = '',
   });
 
   // region UI
@@ -52,19 +52,19 @@ class QrRequestPage extends StatelessWidget {
               ),
 
               /// Qr Code
-                QrImage(
-                  data: '$uid:$userfullname',
-                  version: QrVersions.auto,
-                  size: _widgetSize.getResponsiveWidth(0.5, 0.5, 0.5),
-                  // gapless: false,
-                  embeddedImage: AssetImage('assets/app_logo.png'),
-                  embeddedImageStyle: QrEmbeddedImageStyle(
-                    size: Size(
-                      _widgetSize.getResponsiveHeight(0.05, 0.05, 0.05),
-                      _widgetSize.getResponsiveHeight(0.05, 0.05, 0.05),
-                    ),
+              QrImage(
+                data: '$uid:$userfullname',
+                version: QrVersions.auto,
+                size: _widgetSize.getResponsiveWidth(0.5, 0.5, 0.5),
+                // gapless: false,
+                embeddedImage: AssetImage('assets/app_logo.png'),
+                embeddedImageStyle: QrEmbeddedImageStyle(
+                  size: Size(
+                    _widgetSize.getResponsiveHeight(0.05, 0.05, 0.05),
+                    _widgetSize.getResponsiveHeight(0.05, 0.05, 0.05),
                   ),
                 ),
+              ),
 
               /// Spacing
               SizedBox(
@@ -101,7 +101,7 @@ class QrRequestPage extends StatelessWidget {
           "Request Money",
           style: TextStyle(color: Theme.of(context).primaryColor),
         ),
-     backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).backgroundColor,
         shadowColor: Colors.grey,
         elevation: 3,
       ),

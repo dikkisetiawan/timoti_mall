@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/SendWallet-Api/Send-Wallet-JSON.dart';
+import '/Api/SendWallet-Api/Send-Wallet-JSON.dart';
 import 'dart:convert';
 
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<SendWalletJSON> fetchSendWalletApi(
   String token,

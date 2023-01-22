@@ -1,18 +1,18 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Account/ChangeEmailPage.dart';
-import 'package:timoti_project/Account/ChangePasswordPage.dart';
-import 'package:timoti_project/Account/ChangePhoneNo/ChangePhoneNumber-Step1.dart';
-import 'package:timoti_project/Account/LinkEmail.dart';
-import 'package:timoti_project/Account/LinkPhone/LinkPhone-Step1.dart';
-import 'package:timoti_project/Core/auth.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Account/ChangeEmailPage.dart';
+import '/Account/ChangePasswordPage.dart';
+import '/Account/ChangePhoneNo/ChangePhoneNumber-Step1.dart';
+import '/Account/LinkEmail.dart';
+import '/Account/LinkPhone/LinkPhone-Step1.dart';
+import '/Core/auth.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Functions/Messager.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
 class SettingsPage extends StatefulWidget {
   static const routeName = '/SettingsPage';

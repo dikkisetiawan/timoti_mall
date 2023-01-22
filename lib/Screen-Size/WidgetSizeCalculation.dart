@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
 class WidgetSizeCalculation {
   final BuildContext context;

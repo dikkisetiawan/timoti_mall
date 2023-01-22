@@ -1,16 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-All.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-Cancelled.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-Refund.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-RequestCancelRefund.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-ToPay.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-ToRate.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-ToReceive.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-ToShip.dart';
-import 'package:timoti_project/Data-Class/InitialTabArgument.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Account/PurchaseHistory/Purchase-All.dart';
+import '/Account/PurchaseHistory/Purchase-Cancelled.dart';
+import '/Account/PurchaseHistory/Purchase-Refund.dart';
+import '/Account/PurchaseHistory/Purchase-RequestCancelRefund.dart';
+import '/Account/PurchaseHistory/Purchase-ToPay.dart';
+import '/Account/PurchaseHistory/Purchase-ToRate.dart';
+import '/Account/PurchaseHistory/Purchase-ToReceive.dart';
+import '/Account/PurchaseHistory/Purchase-ToShip.dart';
+import '/Data-Class/InitialTabArgument.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class PurchaseHistoryMain extends StatefulWidget {
   static const routeName = '/Purchase-Main-Page';
@@ -32,7 +32,8 @@ class _PurchaseHistoryMain extends State<PurchaseHistoryMain>
   @override
   void didChangeDependencies() {
     if (loaded == false) {
-      InitialTabArgument data = ModalRoute.of(context)?.settings.arguments as InitialTabArgument;
+      InitialTabArgument data =
+          ModalRoute.of(context)?.settings.arguments as InitialTabArgument;
       tabController = new TabController(
           vsync: this, length: 8, initialIndex: data.tabIndex);
       loaded = true;
@@ -59,7 +60,8 @@ class _PurchaseHistoryMain extends State<PurchaseHistoryMain>
       fontSize: _deviceDetails.getNormalFontSize(),
     );
 
-    final InitialTabArgument data = ModalRoute.of(context)?.settings.arguments as InitialTabArgument;
+    final InitialTabArgument data =
+        ModalRoute.of(context)?.settings.arguments as InitialTabArgument;
 
     return Scaffold(
       body: SafeArea(

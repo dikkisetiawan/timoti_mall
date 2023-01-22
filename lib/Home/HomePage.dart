@@ -8,30 +8,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Core/auth.dart';
-import 'package:timoti_project/Custom-UI/Custom-Icon.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Data-Class/CategoriesDataClass.dart';
-import 'package:timoti_project/Data-Class/CommentClass.dart';
-import 'package:timoti_project/Data-Class/ProductDetailsArgument.dart';
-import 'package:timoti_project/Data-Class/SlideshowImageClass.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Home/Home-Category-Page.dart';
-import 'package:timoti_project/Home/Product-Details-Page.dart';
-import 'package:timoti_project/Home/Search/SearchingPage.dart';
-import 'package:timoti_project/Home/SelectAddress/SelectAddress-Main.dart';
-import 'package:timoti_project/Home/SelectAddress/SelectMapResult.dart';
-import 'package:timoti_project/Nav.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/StaticData.dart';
-import 'package:timoti_project/WebWidget/WebDrawer.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Core/auth.dart';
+import '/Custom-UI/Custom-Icon.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Data-Class/CategoriesDataClass.dart';
+import '/Data-Class/CommentClass.dart';
+import '/Data-Class/ProductDetailsArgument.dart';
+import '/Data-Class/SlideshowImageClass.dart';
+import '/Functions/Messager.dart';
+import '/Home/Home-Category-Page.dart';
+import '/Home/Product-Details-Page.dart';
+import '/Home/Search/SearchingPage.dart';
+import '/Home/SelectAddress/SelectAddress-Main.dart';
+import '/Home/SelectAddress/SelectMapResult.dart';
+import '/Nav.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/StaticData.dart';
+import '/WebWidget/WebDrawer.dart';
+import '/enums/device-screen-type.dart';
 import 'package:new_version/new_version.dart';
 import 'package:page_transition/page_transition.dart';
 import 'dart:math';
-import 'package:timoti_project/WebWidget/WebLayout.dart';
+import '/WebWidget/WebLayout.dart';
 
 class HomePage extends StatefulWidget {
   static const routeName = "/HomePage";
@@ -802,9 +802,7 @@ class HomePageState extends State<HomePage> {
                 deviceDetails: _deviceDetails,
                 enableShadow: false,
                 bgColor:
-                i == 0 ? Color(0xFFE20016) : Theme
-                    .of(context)
-                    .shadowColor,
+                    i == 0 ? Color(0xFFE20016) : Theme.of(context).shadowColor,
                 contentBGcolor: i == 0 ? Color(0xFFE20016) : Colors.white,
                 sectionTitleColor: i == 0 ? Colors.white : Colors.black,
                 contentColor: i == 0 ? Colors.white : Colors.black,
@@ -813,7 +811,7 @@ class HomePageState extends State<HomePage> {
                 hasUnderline: i == 0 ? false : true,
                 sectionIndex: i,
               );
-            }else{
+            } else {
               return DesktopDesignTypeWithContent(
                 contentIsPrice: true,
                 boxWidth: _widgetSize.getResponsiveWidth(
@@ -839,10 +837,7 @@ class HomePageState extends State<HomePage> {
                 widgetSize: _widgetSize,
                 deviceDetails: _deviceDetails,
                 enableShadow: false,
-                bgColor:
-                i == 0 ? Colors.black : Theme
-                    .of(context)
-                    .shadowColor,
+                bgColor: i == 0 ? Colors.black : Theme.of(context).shadowColor,
                 contentBGcolor: i == 0 ? Colors.black : Colors.white,
                 sectionTitleColor: i == 0 ? Colors.orange : Colors.orange,
                 contentColor: i == 0 ? Colors.white : Colors.black,
@@ -1450,7 +1445,7 @@ class HomePageState extends State<HomePage> {
 
                   /// Spacing
                   //if (slideshowImageList.length > 0)
-                    //SliverToBoxAdapter(child: SizedBox(height: 10)),
+                  //SliverToBoxAdapter(child: SizedBox(height: 10)),
 
                   /// Section UI
                   getSectionUI(_deviceDetails, _widgetSize, mediaQuery),
@@ -1557,7 +1552,6 @@ class HomePageState extends State<HomePage> {
 
                   ///Footer
                   getFooterUI(_widgetSize, _deviceDetails),
-
                 ],
               ),
               bottomAppBarState: widget.bottomAppBarState,
@@ -3589,18 +3583,18 @@ class DesktopDesignTypeWithContent extends StatelessWidget {
               decoration: BoxDecoration(
                 boxShadow: enableShadow == true
                     ? [
-                  BoxShadow(
-                      blurRadius: 3,
-                      color: Colors.grey,
-                      spreadRadius: 0.5)
-                ]
+                        BoxShadow(
+                            blurRadius: 3,
+                            color: Colors.grey,
+                            spreadRadius: 0.5)
+                      ]
                     : null,
                 color: contentBGcolor,
                 borderRadius: roundedContent == true
                     ? new BorderRadius.only(
-                  bottomLeft: const Radius.circular(10.0),
-                  bottomRight: const Radius.circular(10.0),
-                )
+                        bottomLeft: const Radius.circular(10.0),
+                        bottomRight: const Radius.circular(10.0),
+                      )
                     : null,
               ),
               child: InkWell(
@@ -3634,12 +3628,12 @@ class DesktopDesignTypeWithContent extends StatelessWidget {
                         productDataList[i].productName,
                         overflow: TextOverflow.ellipsis,
                         maxLines:
-                        getDeviceType(mediaQuery) == DeviceScreenType.Mobile
-                            ? 1
-                            : 2,
+                            getDeviceType(mediaQuery) == DeviceScreenType.Mobile
+                                ? 1
+                                : 2,
                         //minFontSize: deviceDetails.getNormalFontSize() - 2,
                         style: TextStyle(
-                          fontSize: 15,//deviceDetails.getNormalFontSize(),
+                          fontSize: 15, //deviceDetails.getNormalFontSize(),
                           fontWeight: FontWeight.w600,
                           color: contentColor,
                         ),
@@ -3654,18 +3648,18 @@ class DesktopDesignTypeWithContent extends StatelessWidget {
                         child: AutoSizeText(
                           contentIsPrice == true
                               ?
-                          // Price
-                          'RM ' +
-                              formatCurrency.format(
-                                double.parse(
-                                  productDataList[i].priceString,
-                                ),
-                              )
+                              // Price
+                              'RM ' +
+                                  formatCurrency.format(
+                                    double.parse(
+                                      productDataList[i].priceString,
+                                    ),
+                                  )
                               :
-                          // Description
-                          productDataList[i].productDescription != ''
-                              ? productDataList[i].productDescription
-                              : '',
+                              // Description
+                              productDataList[i].productDescription != ''
+                                  ? productDataList[i].productDescription
+                                  : '',
                           maxLines: 1,
                           minFontSize: deviceDetails.getNormalFontSize(),
                           overflow: TextOverflow.ellipsis,
@@ -3698,189 +3692,189 @@ class DesktopDesignTypeWithContent extends StatelessWidget {
       hasUnderline: hasUnderline,
       content: productDataList.length > 0
           ?
-      // Content (New Ver)
-      Container(
-        width: widgetSize.getResponsiveWidth(1, 1, 1),
-        // height: boxHeight,
-        child: Center(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            // padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
-            child: Row(
-              children: getContentUI(context),
-            ),
-          ),
-        ),
-      )
-
-      /// Content (Old Ver)
-      // Container(
-      //     width: widgetSize.getResponsiveWidth(1, 1, 1),
-      //     height: boxHeight,
-      //     child: Center(
-      //       child: ListView.builder(
-      //         shrinkWrap: true,
-      //         controller: scrollController,
-      //         scrollDirection: Axis.horizontal,
-      //         itemCount: productDataList.length,
-      //         itemBuilder: (context, index) {
-      //           return Padding(
-      //             padding: EdgeInsets.only(
-      //               left: index == 0
-      //                   ? widgetSize.getResponsiveWidth(0.05, 0.05, 0.02)
-      //                   : widgetSize.getResponsiveWidth(0.03, 0.05, 0.02),
-      //             ),
-      //             child: Center(
-      //               child: Container(
-      //                 width: boxWidth,
-      //                 // height: boxHeight / 0.7,
-      //                 decoration: BoxDecoration(
-      //                   boxShadow: enableShadow == true
-      //                       ? [
-      //                           BoxShadow(
-      //                               blurRadius: 3,
-      //                               color: Colors.grey,
-      //                               spreadRadius: 0.5)
-      //                         ]
-      //                       : null,
-      //                   color: contentBGcolor,
-      //                   borderRadius: roundedContent == true
-      //                       ? new BorderRadius.only(
-      //                           bottomLeft: const Radius.circular(10.0),
-      //                           bottomRight: const Radius.circular(10.0),
-      //                         )
-      //                       : null,
-      //                 ),
-      //                 child: InkWell(
-      //                   onTap: () {
-      //                     Navigator.pushNamed(
-      //                       context,
-      //                       ProductDetailsPage.routeName,
-      //                       arguments: productDataList[index],
-      //                     );
-      //                   },
-      //                   child: Column(
-      //                     mainAxisAlignment: MainAxisAlignment.center,
-      //                     children: [
-      //                       /// Image
-      //                       DesignTypeImage(
-      //                         boxWidth: boxWidth,
-      //                         flexSize: 6,
-      //                         isCircle: false,
-      //                         targetImageUrl:
-      //                             productDataList[index].urlList[0],
-      //                       ),
-      //
-      //                       // Spacing
-      //                       SizedBox(height: 10),
-      //
-      //                       /// Title
-      //                       Align(
-      //                         alignment:
-      //                             productDataList[index].productName != ''
-      //                                 ? Alignment.bottomLeft
-      //                                 : Alignment.centerLeft,
-      //                         child: AutoSizeText(
-      //                           productDataList[index].productName,
-      //                           overflow: TextOverflow.ellipsis,
-      //                           maxLines: getDeviceType(mediaQuery) ==
-      //                                   DeviceScreenType.Mobile
-      //                               ? 1
-      //                               : 2,
-      //                           minFontSize:
-      //                               deviceDetails.getNormalFontSize() - 2,
-      //                           style: TextStyle(
-      //                             fontSize:
-      //                                 deviceDetails.getNormalFontSize(),
-      //                             fontWeight: FontWeight.w600,
-      //                             color: contentColor,
-      //                           ),
-      //                         ),
-      //                       ),
-      //
-      //                       /// Content
-      //                       Padding(
-      //                         padding: const EdgeInsets.only(top: 8.0),
-      //                         child: Align(
-      //                           alignment: Alignment.center,
-      //                           child: AutoSizeText(
-      //                             contentIsPrice == true
-      //                                 ?
-      //                                 // Price
-      //                                 'RM ' +
-      //                                     formatCurrency.format(
-      //                                       double.parse(
-      //                                         productDataList[index]
-      //                                             .priceString,
-      //                                       ),
-      //                                     )
-      //                                 :
-      //                                 // Description
-      //                                 productDataList[index]
-      //                                             .productDescription !=
-      //                                         ''
-      //                                     ? productDataList[index]
-      //                                         .productDescription
-      //                                     : '',
-      //                             maxLines: 1,
-      //                             minFontSize:
-      //                                 deviceDetails.getNormalFontSize(),
-      //                             overflow: TextOverflow.ellipsis,
-      //                             style: TextStyle(
-      //                               fontSize: deviceDetails
-      //                                       .getNormalFontSize() -
-      //                                   3,
-      //                               fontWeight: FontWeight.w700,
-      //                               color: subContentColor,
-      //                             ),
-      //                           ),
-      //                         ),
-      //                       ),
-      //
-      //                       // Spacing
-      //                       Container(
-      //                         color: Colors.green,
-      //                         child: SizedBox(height: 10, width: 10),
-      //                       ),
-      //                     ],
-      //                   ),
-      //                 ),
-      //               ),
-      //             ),
-      //           );
-      //         },
-      //       ),
-      //     ),
-      //   )
-          :
-
-      /// Loading
-      Padding(
-        padding: EdgeInsets.only(
-            left: widgetSize.getResponsiveWidth(0.05, 0.05, 0.05)),
-        child: Container(
-          width: widgetSize.getResponsiveWidth(0.9, 0.9, 0.9),
-          child: ListView.builder(
-            shrinkWrap: true,
-            controller: scrollController,
-            scrollDirection: Axis.horizontal,
-            itemCount: 5,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: EdgeInsets.only(
-                    right:
-                    widgetSize.getResponsiveWidth(0.05, 0.05, 0.05)),
-                child: FittedBox(
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: CustomLoading(),
+          // Content (New Ver)
+          Container(
+              width: widgetSize.getResponsiveWidth(1, 1, 1),
+              // height: boxHeight,
+              child: Center(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  // padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+                  child: Row(
+                    children: getContentUI(context),
                   ),
                 ),
-              );
-            },
-          ),
-        ),
-      ),
+              ),
+            )
+
+          /// Content (Old Ver)
+          // Container(
+          //     width: widgetSize.getResponsiveWidth(1, 1, 1),
+          //     height: boxHeight,
+          //     child: Center(
+          //       child: ListView.builder(
+          //         shrinkWrap: true,
+          //         controller: scrollController,
+          //         scrollDirection: Axis.horizontal,
+          //         itemCount: productDataList.length,
+          //         itemBuilder: (context, index) {
+          //           return Padding(
+          //             padding: EdgeInsets.only(
+          //               left: index == 0
+          //                   ? widgetSize.getResponsiveWidth(0.05, 0.05, 0.02)
+          //                   : widgetSize.getResponsiveWidth(0.03, 0.05, 0.02),
+          //             ),
+          //             child: Center(
+          //               child: Container(
+          //                 width: boxWidth,
+          //                 // height: boxHeight / 0.7,
+          //                 decoration: BoxDecoration(
+          //                   boxShadow: enableShadow == true
+          //                       ? [
+          //                           BoxShadow(
+          //                               blurRadius: 3,
+          //                               color: Colors.grey,
+          //                               spreadRadius: 0.5)
+          //                         ]
+          //                       : null,
+          //                   color: contentBGcolor,
+          //                   borderRadius: roundedContent == true
+          //                       ? new BorderRadius.only(
+          //                           bottomLeft: const Radius.circular(10.0),
+          //                           bottomRight: const Radius.circular(10.0),
+          //                         )
+          //                       : null,
+          //                 ),
+          //                 child: InkWell(
+          //                   onTap: () {
+          //                     Navigator.pushNamed(
+          //                       context,
+          //                       ProductDetailsPage.routeName,
+          //                       arguments: productDataList[index],
+          //                     );
+          //                   },
+          //                   child: Column(
+          //                     mainAxisAlignment: MainAxisAlignment.center,
+          //                     children: [
+          //                       /// Image
+          //                       DesignTypeImage(
+          //                         boxWidth: boxWidth,
+          //                         flexSize: 6,
+          //                         isCircle: false,
+          //                         targetImageUrl:
+          //                             productDataList[index].urlList[0],
+          //                       ),
+          //
+          //                       // Spacing
+          //                       SizedBox(height: 10),
+          //
+          //                       /// Title
+          //                       Align(
+          //                         alignment:
+          //                             productDataList[index].productName != ''
+          //                                 ? Alignment.bottomLeft
+          //                                 : Alignment.centerLeft,
+          //                         child: AutoSizeText(
+          //                           productDataList[index].productName,
+          //                           overflow: TextOverflow.ellipsis,
+          //                           maxLines: getDeviceType(mediaQuery) ==
+          //                                   DeviceScreenType.Mobile
+          //                               ? 1
+          //                               : 2,
+          //                           minFontSize:
+          //                               deviceDetails.getNormalFontSize() - 2,
+          //                           style: TextStyle(
+          //                             fontSize:
+          //                                 deviceDetails.getNormalFontSize(),
+          //                             fontWeight: FontWeight.w600,
+          //                             color: contentColor,
+          //                           ),
+          //                         ),
+          //                       ),
+          //
+          //                       /// Content
+          //                       Padding(
+          //                         padding: const EdgeInsets.only(top: 8.0),
+          //                         child: Align(
+          //                           alignment: Alignment.center,
+          //                           child: AutoSizeText(
+          //                             contentIsPrice == true
+          //                                 ?
+          //                                 // Price
+          //                                 'RM ' +
+          //                                     formatCurrency.format(
+          //                                       double.parse(
+          //                                         productDataList[index]
+          //                                             .priceString,
+          //                                       ),
+          //                                     )
+          //                                 :
+          //                                 // Description
+          //                                 productDataList[index]
+          //                                             .productDescription !=
+          //                                         ''
+          //                                     ? productDataList[index]
+          //                                         .productDescription
+          //                                     : '',
+          //                             maxLines: 1,
+          //                             minFontSize:
+          //                                 deviceDetails.getNormalFontSize(),
+          //                             overflow: TextOverflow.ellipsis,
+          //                             style: TextStyle(
+          //                               fontSize: deviceDetails
+          //                                       .getNormalFontSize() -
+          //                                   3,
+          //                               fontWeight: FontWeight.w700,
+          //                               color: subContentColor,
+          //                             ),
+          //                           ),
+          //                         ),
+          //                       ),
+          //
+          //                       // Spacing
+          //                       Container(
+          //                         color: Colors.green,
+          //                         child: SizedBox(height: 10, width: 10),
+          //                       ),
+          //                     ],
+          //                   ),
+          //                 ),
+          //               ),
+          //             ),
+          //           );
+          //         },
+          //       ),
+          //     ),
+          //   )
+          :
+
+          /// Loading
+          Padding(
+              padding: EdgeInsets.only(
+                  left: widgetSize.getResponsiveWidth(0.05, 0.05, 0.05)),
+              child: Container(
+                width: widgetSize.getResponsiveWidth(0.9, 0.9, 0.9),
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  controller: scrollController,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: EdgeInsets.only(
+                          right:
+                              widgetSize.getResponsiveWidth(0.05, 0.05, 0.05)),
+                      child: FittedBox(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: CustomLoading(),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
       bgColor: bgColor,
       widgetSize: widgetSize,
       deviceDetails: deviceDetails,
@@ -3937,7 +3931,6 @@ class SectionDesign extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               /// Title
               Padding(
                 padding: EdgeInsets.fromLTRB(
@@ -3963,8 +3956,7 @@ class SectionDesign extends StatelessWidget {
           ),
         ),
       );
-    }
-    else{
+    } else {
       return Container(
         width: _widgetSize.getResponsiveWidth(1, 1, 1),
         decoration: BoxDecoration(
@@ -3979,11 +3971,10 @@ class SectionDesign extends StatelessWidget {
           //     : null,
         ),
         child: Padding(
-          padding: const EdgeInsets.only(top:15.0, bottom: 10.0),
+          padding: const EdgeInsets.only(top: 15.0, bottom: 10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               /// Title
               Center(
                 child: Container(
@@ -3991,20 +3982,20 @@ class SectionDesign extends StatelessWidget {
                     bottom: 5, // Space between underline and text
                   ),
                   decoration: BoxDecoration(
-                      border: Border(bottom: BorderSide(
-                        color: Colors.orange,
-                        width: 2.0, // Underline thickness
-                      ))
-                  ),
+                      border: Border(
+                          bottom: BorderSide(
+                    color: Colors.orange,
+                    width: 2.0, // Underline thickness
+                  ))),
                   child: Text(
-                  sectionTitle,
-                  style: TextStyle(
-                    letterSpacing: 1.2,
-                    color: sectionTitleColor,
-                    fontWeight: FontWeight.w800,
-                    fontSize: _deviceDetails.getTitleFontSize(),
+                    sectionTitle,
+                    style: TextStyle(
+                      letterSpacing: 1.2,
+                      color: sectionTitleColor,
+                      fontWeight: FontWeight.w800,
+                      fontSize: _deviceDetails.getTitleFontSize(),
+                    ),
                   ),
-                ),
                 ),
               ),
 
@@ -4337,97 +4328,109 @@ class DesignTypeImage extends StatelessWidget {
   }
 }
 
-
 /// Footer
 Widget getFooterUI(
-    WidgetSizeCalculation _widgetSize,
-    DeviceDetails _deviceDetails,
-    ) {
+  WidgetSizeCalculation _widgetSize,
+  DeviceDetails _deviceDetails,
+) {
   double boxHeight = _widgetSize.getResponsiveHeight(0.27, 0.4, 0.6);
   return SliverToBoxAdapter(
     child: Container(
-      color: Color(0xFF3b322b),
-      width: _widgetSize.getResponsiveWidth(1, 1, 1),
-      padding: EdgeInsets.fromLTRB(
-        _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
-        30,
-        _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
-        10,
-      ),
-      //alignment: Alignment.centerLeft,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
-            children: [
-              RichText(
-                  text: TextSpan(
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                    children: <TextSpan>[
-                      //'TIMOTI(M)Sdn.Bhd. (1299024-U) \n\nNo. 20B, Jalan Psj 1/31, 46000 Selangor, Petaling Jaya, Malaysia',
-                      TextSpan(text: 'TIMOTI STORY', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                      TextSpan(text: '\n\nSimple & Finest', style: TextStyle(fontWeight: FontWeight.bold)),
-                      TextSpan(text: '\nWe commit to provide the finest skin cares. '
-                          '\nWe ensure the nourishment for all skin types. \nNature, No alcohol, Non acid formula.'),
-                      TextSpan(text: '\n\nEffortless & Impressive', style: TextStyle(fontWeight: FontWeight.bold)),
-                      TextSpan(text: '\nWe analyse and response to everyone needs with our unique products.'
-                          '\nIts an effortless, effective yet affordable types of privilege.'),
-                    ],
-                  )
-              ),
-
-            ],
-          ),
-
-          Column(
-            children: [
-              RichText(
-                  text: TextSpan(
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                    children: <TextSpan>[
-                      //'TIMOTI(M)Sdn.Bhd. (1299024-U) \n\nNo. 20B, Jalan Psj 1/31, 46000 Selangor, Petaling Jaya, Malaysia',
-                      TextSpan(text: 'OUR PRODUCTS', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
-                      TextSpan(text: '\n\nMAKE UP'),
-                      TextSpan(text: '\n\nSKIN CARE'),
-                      TextSpan(text: '\n\nTOOLS & BRUSHES'),
-                      TextSpan(text: '\n\nMASK AND TREATMENT'),
-                      TextSpan(text: '\n\nCLEANSING'),
-                      TextSpan(text: '\n\nGIFT'),
-
-                    ],
-                  )
-              ),
-            ],
-          ),
-
-          Column(
-            children: [
-              RichText(
-                  text: TextSpan(
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                    children: <TextSpan>[
-                      //'TIMOTI(M)Sdn.Bhd. (1299024-U) \n\nNo. 20B, Jalan Psj 1/31, 46000 Selangor, Petaling Jaya, Malaysia',
-                      TextSpan(text: 'NEED HELP?', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
-                      TextSpan(text: '\n\nEMAIL: timoti@timoti.asia \nWe will reply to your inquiry within 48 working hours.'),
-                      TextSpan(text: '\n\nTEL: 1-700-81-9644 \nMon-Fri (except public holiday) \n9AN - 5PM (UTC+08:00) Malaysia Time'),
-                      TextSpan(text: '\n\nADDRESS'),
-                      TextSpan(text: '\nTIMOTI (M) Sdn. Bhd.'),
-                      TextSpan(text: '\nNo. 20B, Jalan Psj 1/31, 46000 Selangor, Petaling Jaya, Malaysia'),
-                    ],
-                  )
-              ),
-            ],
-          )
-
-        ],
-      )
-    ),
+        color: Color(0xFF3b322b),
+        width: _widgetSize.getResponsiveWidth(1, 1, 1),
+        padding: EdgeInsets.fromLTRB(
+          _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
+          30,
+          _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
+          10,
+        ),
+        //alignment: Alignment.centerLeft,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Column(
+              children: [
+                RichText(
+                    text: TextSpan(
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  children: <TextSpan>[
+                    //'TIMOTI(M)Sdn.Bhd. (1299024-U) \n\nNo. 20B, Jalan Psj 1/31, 46000 Selangor, Petaling Jaya, Malaysia',
+                    TextSpan(
+                        text: 'TIMOTI STORY',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    TextSpan(
+                        text: '\n\nSimple & Finest',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    TextSpan(
+                        text: '\nWe commit to provide the finest skin cares. '
+                            '\nWe ensure the nourishment for all skin types. \nNature, No alcohol, Non acid formula.'),
+                    TextSpan(
+                        text: '\n\nEffortless & Impressive',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    TextSpan(
+                        text:
+                            '\nWe analyse and response to everyone needs with our unique products.'
+                            '\nIts an effortless, effective yet affordable types of privilege.'),
+                  ],
+                )),
+              ],
+            ),
+            Column(
+              children: [
+                RichText(
+                    text: TextSpan(
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  children: <TextSpan>[
+                    //'TIMOTI(M)Sdn.Bhd. (1299024-U) \n\nNo. 20B, Jalan Psj 1/31, 46000 Selangor, Petaling Jaya, Malaysia',
+                    TextSpan(
+                        text: 'OUR PRODUCTS',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    TextSpan(text: '\n\nMAKE UP'),
+                    TextSpan(text: '\n\nSKIN CARE'),
+                    TextSpan(text: '\n\nTOOLS & BRUSHES'),
+                    TextSpan(text: '\n\nMASK AND TREATMENT'),
+                    TextSpan(text: '\n\nCLEANSING'),
+                    TextSpan(text: '\n\nGIFT'),
+                  ],
+                )),
+              ],
+            ),
+            Column(
+              children: [
+                RichText(
+                    text: TextSpan(
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  children: <TextSpan>[
+                    //'TIMOTI(M)Sdn.Bhd. (1299024-U) \n\nNo. 20B, Jalan Psj 1/31, 46000 Selangor, Petaling Jaya, Malaysia',
+                    TextSpan(
+                        text: 'NEED HELP?',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    TextSpan(
+                        text:
+                            '\n\nEMAIL: timoti@timoti.asia \nWe will reply to your inquiry within 48 working hours.'),
+                    TextSpan(
+                        text:
+                            '\n\nTEL: 1-700-81-9644 \nMon-Fri (except public holiday) \n9AN - 5PM (UTC+08:00) Malaysia Time'),
+                    TextSpan(text: '\n\nADDRESS'),
+                    TextSpan(text: '\nTIMOTI (M) Sdn. Bhd.'),
+                    TextSpan(
+                        text:
+                            '\nNo. 20B, Jalan Psj 1/31, 46000 Selangor, Petaling Jaya, Malaysia'),
+                  ],
+                )),
+              ],
+            )
+          ],
+        )),
   );
 }

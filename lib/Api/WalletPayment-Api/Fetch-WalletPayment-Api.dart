@@ -1,12 +1,12 @@
 import 'dart:io';
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/WalletPayment-Api/WalletPaymentJSON.dart';
+import '/Api/WalletPayment-Api/WalletPaymentJSON.dart';
 import 'dart:convert';
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<WalletPaymentJSON> fetchWalletPaymentApi(
-    String token,
-    List<String> orderIDs,
+  String token,
+  List<String> orderIDs,
 ) async {
   final String apiEndpoint = App.apiURL + '/storeapi/Wallet/Pay';
 

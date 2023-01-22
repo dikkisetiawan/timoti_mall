@@ -4,17 +4,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Account/PurchaseHistory/Purchase-OrderDetails.dart';
-import 'package:timoti_project/Address-Page/AddressClass.dart';
-import 'package:timoti_project/Custom-UI/Custom-CheckOutUI.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Custom-UI/Custom-ShippingTotal.dart';
-import 'package:timoti_project/Data-Class/OrderDetailClass.dart';
-import 'package:timoti_project/Data-Class/OrderHistoryClass.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/enums/OrderHistoryType.dart';
-import 'package:timoti_project/main.dart';
+import '/Account/PurchaseHistory/Purchase-OrderDetails.dart';
+import '/Address-Page/AddressClass.dart';
+import '/Custom-UI/Custom-CheckOutUI.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Custom-UI/Custom-ShippingTotal.dart';
+import '/Data-Class/OrderDetailClass.dart';
+import '/Data-Class/OrderHistoryClass.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/enums/OrderHistoryType.dart';
+import '/main.dart';
 
 class ToShipPage extends StatefulWidget {
   // static const routeName = '/Coming-Soon-Page';

@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/CustomerToken-Api/CustomerTokenResultJSON.dart';
+import '/Api/CustomerToken-Api/CustomerTokenResultJSON.dart';
 import 'dart:convert';
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<CustomerTokenResultJSON> fetchGetTokenApi(
   String idTokenString,

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:timoti_project/Core/auth.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Phone-Auth/PhoneAuthRegister-Step1.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Core/auth.dart';
+import '/Functions/Messager.dart';
+import '/Phone-Auth/PhoneAuthRegister-Step1.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/enums/Sign-In-Type.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/enums/Sign-In-Type.dart';
 
 class LinkPhoneStepTwo extends StatefulWidget {
   static const routeName = "/LinkPhoneStepTwo";
@@ -208,8 +208,8 @@ class _LinkPhoneStepTwoState extends State<LinkPhoneStepTwo> {
           '',
           error.message,
           _deviceDetails,
-         context,
-                );
+          context,
+        );
       });
 
       // showSnackbar("Successfully signed in UID: ${user.uid}");
@@ -218,7 +218,7 @@ class _LinkPhoneStepTwoState extends State<LinkPhoneStepTwo> {
         '',
         error.message,
         _deviceDetails,
-         context,
+        context,
       );
     }
   }
@@ -245,7 +245,7 @@ class _LinkPhoneStepTwoState extends State<LinkPhoneStepTwo> {
               new MaterialPageRoute(
                 builder: (BuildContext context) =>
                     PhoneAuthRegisterStepOneScreen(
-                      singlePage: false,
+                  singlePage: false,
                 ),
                 fullscreenDialog: true,
               ),

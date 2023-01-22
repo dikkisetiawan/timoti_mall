@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Custom-UI/Custom-LoadingUI.dart';
-import 'package:timoti_project/Data-Class/ProductDetailsArgument.dart';
-import 'package:timoti_project/Home/HomePage.dart';
-import 'package:timoti_project/Home/Product-Details-Page.dart';
-import 'package:timoti_project/Nav.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Custom-UI/Custom-LoadingUI.dart';
+import '/Data-Class/ProductDetailsArgument.dart';
+import '/Home/HomePage.dart';
+import '/Home/Product-Details-Page.dart';
+import '/Nav.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class CategoryPage extends StatefulWidget {
   final Position? userPosition;
@@ -127,11 +127,9 @@ class _CategoryPageState extends State<CategoryPage> {
                               }
                             }
 
-                            ProductDetailsArgument arg =
-                                ProductDetailsArgument(
+                            ProductDetailsArgument arg = ProductDetailsArgument(
                               userPosition: widget.userPosition,
-                              productBaseID:
-                                  productMapData["Product_ID_Base"],
+                              productBaseID: productMapData["Product_ID_Base"],
                               priceString: productMapData["Final_Price"],
                               productDescription:
                                   productMapData["Product_Description"],
@@ -188,8 +186,7 @@ class _CategoryPageState extends State<CategoryPage> {
                               // height: boxHeight * 0.65,
                               height: boxWidth,
                               child: CachedNetworkImage(
-                                errorWidget: (context, url, error) =>
-                                    Container(
+                                errorWidget: (context, url, error) => Container(
                                   color: Colors.grey,
                                   child: Column(
                                     children: [
@@ -201,8 +198,7 @@ class _CategoryPageState extends State<CategoryPage> {
                                       Text(
                                         "Can't Load Image",
                                         style: TextStyle(
-                                          color:
-                                              Theme.of(context).primaryColor,
+                                          color: Theme.of(context).primaryColor,
                                           fontWeight: FontWeight.w600,
                                         ),
                                       ),
@@ -249,6 +245,7 @@ class _CategoryPageState extends State<CategoryPage> {
 
                           // Spacing
                           SizedBox(height: 10),
+
                           /// Title and Text
                           Container(
                             width: boxWidth,
@@ -272,8 +269,8 @@ class _CategoryPageState extends State<CategoryPage> {
                                         color: Colors.black,
                                         spreadRadius: 1,
                                         blurRadius: 10,
-                                        offset: Offset(7,
-                                            5), // changes position of shadow
+                                        offset: Offset(
+                                            7, 5), // changes position of shadow
                                       ),
                                     ]
                                   : null,
@@ -281,8 +278,7 @@ class _CategoryPageState extends State<CategoryPage> {
                               borderRadius: roundedEdge == true
                                   ? BorderRadius.only(
                                       bottomLeft: const Radius.circular(10.0),
-                                      bottomRight:
-                                          const Radius.circular(10.0),
+                                      bottomRight: const Radius.circular(10.0),
                                     )
                                   : null,
                             ),
@@ -345,8 +341,7 @@ class _CategoryPageState extends State<CategoryPage> {
                                         " " +
                                         formatCurrency
                                             .format(double.parse(
-                                                productMapData[
-                                                    "Final_Price"]))
+                                                productMapData["Final_Price"]))
                                             .toString(),
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(

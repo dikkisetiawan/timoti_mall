@@ -2,15 +2,15 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Home/HomePage.dart';
-import 'package:timoti_project/Home/Search/SearchingPage.dart';
-import 'package:timoti_project/Nav.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/WebWidget/WebDrawer.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Functions/Messager.dart';
+import '/Home/HomePage.dart';
+import '/Home/Search/SearchingPage.dart';
+import '/Nav.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/WebWidget/WebDrawer.dart';
+import '/enums/device-screen-type.dart';
 
 class WebAppbar extends StatelessWidget with PreferredSizeWidget {
   final BottomAppBarState bottomAppBarState;
@@ -399,7 +399,9 @@ class WebAppbar extends StatelessWidget with PreferredSizeWidget {
 
     return SafeArea(
       child: Container(
-        color: getDeviceType(mediaQuery) != DeviceScreenType.Desktop ? Theme.of(context).cardColor : Colors.white,
+        color: getDeviceType(mediaQuery) != DeviceScreenType.Desktop
+            ? Theme.of(context).cardColor
+            : Colors.white,
         height: _widgetSize.getResponsiveHeight(0.1, 0.12, 0.12),
         width: double.infinity,
         padding: EdgeInsets.fromLTRB(
@@ -423,7 +425,7 @@ class WebAppbar extends StatelessWidget with PreferredSizeWidget {
                         onTap: () {
                           Navigator.popUntil(context, ModalRoute.withName('/'));
                         },
-                        child:Image.asset('assets/icon/logo.png'),
+                        child: Image.asset('assets/icon/logo.png'),
                       ),
                     ),
                   ),

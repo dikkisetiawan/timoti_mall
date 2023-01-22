@@ -1,6 +1,6 @@
 import 'package:geolocator/geolocator.dart';
-import 'package:timoti_project/Data-Class/CategoriesDataClass.dart';
-import 'package:timoti_project/Nav.dart';
+import '/Data-Class/CategoriesDataClass.dart';
+import '/Nav.dart';
 
 class ProductDetailsArgument {
   Position? userPosition;
@@ -19,7 +19,6 @@ class ProductDetailsArgument {
     required this.productDescription,
     this.productDescriptionHTML,
     required this.priceString,
-
     required this.urlList,
     required this.bottomAppBarState,
   });

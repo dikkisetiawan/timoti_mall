@@ -1,16 +1,16 @@
 import 'package:flutter/cupertino.dart';
-import 'package:timoti_project/enums/Sign-In-Type.dart';
+import '/enums/Sign-In-Type.dart';
 
-class SignInMethod extends ChangeNotifier{
+class SignInMethod extends ChangeNotifier {
   SignInType type;
 
   SignInMethod(this.type);
 
-  SignInType getSignInMethod(){
+  SignInType getSignInMethod() {
     return this.type;
   }
 
-  void updateSignInMethod(SignInType typeValue){
+  void updateSignInMethod(SignInType typeValue) {
     this.type = typeValue;
   }
 }

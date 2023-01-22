@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/CreateOrder-Api/Create-Order-JSON.dart';
-import 'package:timoti_project/Data-Class/CreateOrderClass.dart';
+import '/Api/CreateOrder-Api/Create-Order-JSON.dart';
+import '/Data-Class/CreateOrderClass.dart';
 import 'dart:convert';
 
-import 'package:timoti_project/Data-Class/ListCreateOrderClass.dart';
-import 'package:timoti_project/main.dart';
+import '/Data-Class/ListCreateOrderClass.dart';
+import '/main.dart';
 
 Future<CreateOrderJSON> fetchCreateOrderApi(
   String token,

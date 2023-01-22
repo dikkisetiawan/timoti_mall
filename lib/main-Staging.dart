@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
-import 'package:timoti_project/Url-Navigation/Routes.dart';
+import '/Url-Navigation/Routes.dart';
 import 'main.dart';
 import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
 

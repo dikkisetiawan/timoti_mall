@@ -1,12 +1,12 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:timoti_project/Api/TopUp-Api/Top-Up-Sub-JSON.dart';
+import '/Api/TopUp-Api/Top-Up-Sub-JSON.dart';
 
 part 'Top-Up-JSON.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 
 /// Create class
-class TopUpJSON{
+class TopUpJSON {
   String? paymentId;
   TopUpResult? paymentForm;
   bool? isSuccess;
@@ -18,9 +18,7 @@ class TopUpJSON{
   });
 
   /// Factory method
-  factory TopUpJSON.fromJson(Map<String, dynamic> json) => _$TopUpJSONFromJson(json);
+  factory TopUpJSON.fromJson(Map<String, dynamic> json) =>
+      _$TopUpJSONFromJson(json);
   Map<String, dynamic> toJson() => _$TopUpJSONToJson(this);
 }
-
-
-

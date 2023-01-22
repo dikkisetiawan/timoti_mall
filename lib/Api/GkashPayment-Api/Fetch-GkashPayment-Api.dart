@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/GkashPayment-Api/GkashPaymentJSON.dart';
+import '/Api/GkashPayment-Api/GkashPaymentJSON.dart';
 import 'dart:convert';
 
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<GkashPaymentJSON> fetchGkashPaymentApi(
   String token,

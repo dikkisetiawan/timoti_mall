@@ -1,4 +1,4 @@
-import 'package:timoti_project/enums/Payment-Method-Type.dart';
+import '/enums/Payment-Method-Type.dart';
 
 class PaymentMethodResultClass {
   PaymentMethodType type;

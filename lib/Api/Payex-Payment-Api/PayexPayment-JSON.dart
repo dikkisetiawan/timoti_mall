@@ -1,12 +1,12 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:timoti_project/Api/PaymentResult-JSON.dart';
+import '/Api/PaymentResult-JSON.dart';
 
 part 'PayexPayment-JSON.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 
 /// Create class
-class PayexPaymentJSON{
+class PayexPaymentJSON {
   String? paymentId;
   PaymentResult? paymentForm;
   bool? isSuccess;
@@ -20,9 +20,7 @@ class PayexPaymentJSON{
   });
 
   /// Factory method
-  factory PayexPaymentJSON.fromJson(Map<String, dynamic> json) => _$PayexPaymentJSONFromJson(json);
+  factory PayexPaymentJSON.fromJson(Map<String, dynamic> json) =>
+      _$PayexPaymentJSONFromJson(json);
   Map<String, dynamic> toJson() => _$PayexPaymentJSONToJson(this);
 }
-
-
-

@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/CashOnDelivery-Api/CashOnDeliveryJSON.dart';
+import '/Api/CashOnDelivery-Api/CashOnDeliveryJSON.dart';
 import 'dart:convert';
 
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<CashOnDeliveryJSON> fetchCashOnDeliveryApi(
   String token,

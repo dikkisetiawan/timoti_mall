@@ -1,13 +1,13 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:timoti_project/Account/LinkPhone/LinkPhone-Step2.dart';
-import 'package:timoti_project/Data-Class/PhoneAuthStepTwoArgument.dart';
-import 'package:timoti_project/Phone-Auth/PhoneAuthLogin-Step2.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Account/LinkPhone/LinkPhone-Step2.dart';
+import '/Data-Class/PhoneAuthStepTwoArgument.dart';
+import '/Phone-Auth/PhoneAuthLogin-Step2.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class LinkPhoneStepOne extends StatefulWidget {
   static const routeName = "/LinkPhoneStepOne";

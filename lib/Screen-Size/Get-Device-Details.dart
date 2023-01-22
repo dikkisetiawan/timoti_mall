@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
-class DeviceDetails{
+class DeviceDetails {
   final BuildContext context;
   DeviceDetails(this.context);
 
@@ -18,15 +18,14 @@ class DeviceDetails{
       if (_deviceScreenType == DeviceScreenType.Mobile) {
         //print("It works on mobile");
         return normalFontSize = 15;
-      } else if (_deviceScreenType== DeviceScreenType.Tablet) {
+      } else if (_deviceScreenType == DeviceScreenType.Tablet) {
         //print("It works on tablet");
         return normalFontSize = 18;
-      }
-      else if (_deviceScreenType== DeviceScreenType.Desktop) {
+      } else if (_deviceScreenType == DeviceScreenType.Desktop) {
         //print("It works on tablet");
         return normalFontSize = 21;
       }
-    } else if(_deviceScreenType == null){
+    } else if (_deviceScreenType == null) {
       print("Device Screen Type is Null");
     }
     return normalFontSize;
@@ -39,11 +38,9 @@ class DeviceDetails{
     if (_deviceScreenType != null) {
       if (_deviceScreenType == DeviceScreenType.Mobile) {
         return titleFontSize = 17;
-      }
-      else if (_deviceScreenType == DeviceScreenType.Tablet) {
+      } else if (_deviceScreenType == DeviceScreenType.Tablet) {
         return titleFontSize = 20;
-      }
-      else if (_deviceScreenType == DeviceScreenType.Desktop) {
+      } else if (_deviceScreenType == DeviceScreenType.Desktop) {
         return titleFontSize = 24;
       }
     } else {

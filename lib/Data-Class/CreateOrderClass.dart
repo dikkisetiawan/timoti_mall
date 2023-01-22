@@ -1,10 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:timoti_project/Data-Class/CreateOrderDetailsClass.dart';
+import '/Data-Class/CreateOrderDetailsClass.dart';
 
 part 'CreateOrderClass.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-
 class CreateOrderClass {
   String customerFirstName;
   String customerId;
@@ -85,6 +84,7 @@ class CreateOrderClass {
   });
 
   /// Factory method
-  factory CreateOrderClass.fromJson(Map<String, dynamic> json) => _$CreateOrderClassFromJson(json);
+  factory CreateOrderClass.fromJson(Map<String, dynamic> json) =>
+      _$CreateOrderClassFromJson(json);
   Map<String, dynamic> toJson() => _$CreateOrderClassToJson(this);
 }

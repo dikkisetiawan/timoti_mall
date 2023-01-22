@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Url-Navigation/Routes.dart';
+import '/Url-Navigation/Routes.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

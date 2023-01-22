@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/CheckEmailExist-API/CheckEmailResultJSON.dart';
+import '/Api/CheckEmailExist-API/CheckEmailResultJSON.dart';
 import 'dart:convert';
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<CheckEmailResultJSON> fetchCheckEmailApi(
   String email,

@@ -1,20 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:timoti_project/Data-Class/BranchShippingClass.dart';
-import 'package:timoti_project/Data-Class/ShippingDataClass.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
-import 'package:timoti_project/Functions/Messager.dart';
+import '/Data-Class/BranchShippingClass.dart';
+import '/Data-Class/ShippingDataClass.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
+import '/Functions/Messager.dart';
 
 class ShippingOptionPage extends StatelessWidget {
   static const routeName = '/ShippingOptionPage';
 
   final String branchName;
   final List<ShippingData> shippingDataList;
- final formatCurrency = new NumberFormat.currency(
+  final formatCurrency = new NumberFormat.currency(
     locale: "ms-MY",
     symbol: "",
     decimalDigits: 2,
@@ -165,8 +165,8 @@ class ShippingOptionPage extends StatelessWidget {
             "",
             "This Shipping Option is Not Available Yet",
             _deviceDetails,
-             context,
-                );
+            context,
+          );
         }
       },
       child: Container(

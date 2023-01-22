@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
-class CustomDefaultAppBar extends StatelessWidget with PreferredSizeWidget{
+class CustomDefaultAppBar extends StatelessWidget with PreferredSizeWidget {
   final String appbarTitle;
   final WidgetSizeCalculation widgetSize;
   final VoidCallback onTapFunction;

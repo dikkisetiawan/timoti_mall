@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class OrderCompletedPage extends StatelessWidget {
   final List<String> orderIDs;
-  
+
   const OrderCompletedPage({
     Key? key,
     required this.orderIDs,
@@ -75,7 +75,6 @@ class OrderCompletedPage extends StatelessWidget {
       SizedBox(height: _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05)),
     );
 
-
     /// Order Completed Title
     pageContent.add(
       Padding(
@@ -96,7 +95,9 @@ class OrderCompletedPage extends StatelessWidget {
       Padding(
         padding: EdgeInsets.only(bottom: 8.0),
         child: Text(
-          orderIDs.length == 1 ? 'Here is your Order ID' : 'Here are your Order ID(s)',
+          orderIDs.length == 1
+              ? 'Here is your Order ID'
+              : 'Here are your Order ID(s)',
           style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontSize: _deviceDetails.getNormalFontSize(),

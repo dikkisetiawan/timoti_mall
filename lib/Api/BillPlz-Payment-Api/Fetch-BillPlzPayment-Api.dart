@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/BillPlz-Payment-Api/BillPlzPayment-JSON.dart';
+import '/Api/BillPlz-Payment-Api/BillPlzPayment-JSON.dart';
 import 'dart:convert';
 
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<BillPlzPaymentJSON> fetchBillPlzPaymentApi(
   String token,

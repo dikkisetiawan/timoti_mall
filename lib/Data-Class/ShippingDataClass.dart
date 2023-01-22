@@ -1,4 +1,4 @@
-import 'package:timoti_project/enums/Shipping-Method-Type.dart';
+import '/enums/Shipping-Method-Type.dart';
 
 class ShippingData {
   String shippingName;

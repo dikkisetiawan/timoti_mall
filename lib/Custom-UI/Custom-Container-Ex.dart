@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 // import 'package:firebase_image/firebase_image.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 import '../Screen-Size/WidgetSizeCalculation.dart';
 
 class CustomContainerEx extends StatelessWidget {

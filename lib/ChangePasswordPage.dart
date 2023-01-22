@@ -2,14 +2,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:timoti_project/Custom-UI/Custom-RoundedInputField.dart';
+import '/Custom-UI/Custom-RoundedInputField.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Functions/Messager.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/enums/device-screen-type.dart';
 
 class ChangePassword extends StatefulWidget {
   static const routeName = '/ChangePassword';
@@ -86,7 +86,6 @@ class _ChangePasswordState extends State<ChangePassword> {
             _widgetSize,
             'New Password',
             null,
-
           ),
 
           SizedBox(height: _widgetSize.getResponsiveHeight(0.05, 0.05, 0.05)),
@@ -102,7 +101,6 @@ class _ChangePasswordState extends State<ChangePassword> {
             _widgetSize,
             'Confirm Password',
             null,
-
           ),
 
           /// Spacing
@@ -302,8 +300,8 @@ class _ChangePasswordState extends State<ChangePassword> {
           '',
           "Password Updated",
           _deviceDetails,
-         context,
-                );
+          context,
+        );
       });
     } on PlatformException catch (error) {
       if (this.mounted) {
@@ -314,7 +312,7 @@ class _ChangePasswordState extends State<ChangePassword> {
         '',
         'Please login again to change password',
         _deviceDetails,
-         context,
+        context,
       );
     }
   }

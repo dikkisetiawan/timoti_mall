@@ -1,14 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Custom-UI/Custom-DefaultAppBar.dart';
-import 'package:timoti_project/Data-Class/PaymentMethodResultClass.dart';
-import 'package:timoti_project/Functions/ConvertToPaymentMethod.dart';
-import 'package:timoti_project/Functions/Messager.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
-import 'package:timoti_project/Screen-Size/ui-utils.dart';
-import 'package:timoti_project/Wallet/TopUp/TopUpPage.dart';
-import 'package:timoti_project/enums/device-screen-type.dart';
+import '/Custom-UI/Custom-DefaultAppBar.dart';
+import '/Data-Class/PaymentMethodResultClass.dart';
+import '/Functions/ConvertToPaymentMethod.dart';
+import '/Functions/Messager.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/ui-utils.dart';
+import '/Wallet/TopUp/TopUpPage.dart';
+import '/enums/device-screen-type.dart';
 
 class TopUpPaymentMethodPage extends StatefulWidget {
   static const routeName = '/TopUpPaymentMethodPage';
@@ -40,10 +40,10 @@ class _TopUpPaymentMethodPageState extends State<TopUpPaymentMethodPage> {
   // region UI
   /// Custom App bar
   PreferredSize _getCustomAppBar(
-      String title,
-      WidgetSizeCalculation _widgetSize,
-      DeviceDetails _deviceDetails,
-      ) {
+    String title,
+    WidgetSizeCalculation _widgetSize,
+    DeviceDetails _deviceDetails,
+  ) {
     var mediaQuery = MediaQuery.of(context);
 
     return PreferredSize(
@@ -60,22 +60,22 @@ class _TopUpPaymentMethodPageState extends State<TopUpPaymentMethodPage> {
               children: <Widget>[
                 Container(
                   decoration:
-                  BoxDecoration(color: Theme.of(context).backgroundColor),
+                      BoxDecoration(color: Theme.of(context).backgroundColor),
                 ),
                 SafeArea(
                   minimum: getDeviceType(mediaQuery) == DeviceScreenType.Mobile
                       ? EdgeInsets.fromLTRB(
-                    _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
-                    0,
-                    _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
-                    0,
-                  )
+                          _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
+                          0,
+                          _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
+                          0,
+                        )
                       : EdgeInsets.fromLTRB(
-                    _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
-                    0,
-                    _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
-                    0,
-                  ),
+                          _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
+                          0,
+                          _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
+                          0,
+                        ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -88,16 +88,16 @@ class _TopUpPaymentMethodPageState extends State<TopUpPaymentMethodPage> {
                           Icons.arrow_back_ios_sharp,
                           color: Theme.of(context).primaryColor,
                           size:
-                          _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
+                              _widgetSize.getResponsiveWidth(0.05, 0.05, 0.05),
                         ),
                       ),
 
                       /// Title
                       SizedBox(
                         width:
-                        getDeviceType(mediaQuery) == DeviceScreenType.Mobile
-                            ? _widgetSize.getResponsiveWidth(0.6, 0.6, 0.6)
-                            : _widgetSize.getResponsiveWidth(0.5, 0.5, 0.5),
+                            getDeviceType(mediaQuery) == DeviceScreenType.Mobile
+                                ? _widgetSize.getResponsiveWidth(0.6, 0.6, 0.6)
+                                : _widgetSize.getResponsiveWidth(0.5, 0.5, 0.5),
                         child: Center(
                           child: Text(
                             title,

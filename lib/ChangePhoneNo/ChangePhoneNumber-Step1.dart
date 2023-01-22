@@ -2,13 +2,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:timoti_project/Account/ChangePhoneNo/ChangePhoneNumber-Step2.dart';
-import 'package:timoti_project/Data-Class/PhoneAuthStepTwoArgument.dart';
-import 'package:timoti_project/Phone-Auth/PhoneAuthLogin-Step2.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
+import '/Account/ChangePhoneNo/ChangePhoneNumber-Step2.dart';
+import '/Data-Class/PhoneAuthStepTwoArgument.dart';
+import '/Phone-Auth/PhoneAuthLogin-Step2.dart';
+import '/Screen-Size/Get-Device-Details.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class ChangePhoneNumberStepOne extends StatefulWidget {
   static const routeName = "/ChangePhoneNumberStepOne";
@@ -20,7 +20,6 @@ class ChangePhoneNumberStepOne extends StatefulWidget {
 
 class _ChangePhoneNumberStepOneState extends State<ChangePhoneNumberStepOne> {
   String countryNo = '';
-
 
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
 
@@ -34,7 +33,7 @@ class _ChangePhoneNumberStepOneState extends State<ChangePhoneNumberStepOne> {
   String phoneErrorString = '';
 
   User firebaseUser = FirebaseAuth.instance.currentUser as User;
-  FirebaseFirestore  firestore = FirebaseFirestore.instance;
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   @override
   void initState() {
@@ -56,10 +55,8 @@ class _ChangePhoneNumberStepOneState extends State<ChangePhoneNumberStepOne> {
       setState(() {});
     }
 
-    DocumentSnapshot dbData = await firestore
-        .collection('Customers')
-        .doc(firebaseUser.uid)
-        .get();
+    DocumentSnapshot dbData =
+        await firestore.collection('Customers').doc(firebaseUser.uid).get();
 
     if (this.mounted) {
       Map<String, dynamic> data = dbData.data() as Map<String, dynamic>;
@@ -149,7 +146,7 @@ class _ChangePhoneNumberStepOneState extends State<ChangePhoneNumberStepOne> {
     };
 
     final PhoneVerificationFailed verificationFailed =
-        (FirebaseAuthException  authException) {
+        (FirebaseAuthException authException) {
       if (mounted)
         setState(() {
           status =
@@ -190,7 +187,8 @@ class _ChangePhoneNumberStepOneState extends State<ChangePhoneNumberStepOne> {
   }
 
   void showSnackbar(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(message)));
   }
 
   Widget goToPhonePage(
@@ -209,7 +207,7 @@ class _ChangePhoneNumberStepOneState extends State<ChangePhoneNumberStepOne> {
             verificationId: "11111111",
           );
 
-          Navigator.popAndPushNamed (
+          Navigator.popAndPushNamed(
             context,
             PhoneAuthLoginStepTwoScreen.routeName,
             arguments: arg,
@@ -233,7 +231,6 @@ class _ChangePhoneNumberStepOneState extends State<ChangePhoneNumberStepOne> {
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-
       appBar: AppBar(
         leading: InkWell(
           onTap: () {

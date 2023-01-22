@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:timoti_project/Api/Payex-Payment-Api/PayexPayment-JSON.dart';
+import '/Api/Payex-Payment-Api/PayexPayment-JSON.dart';
 import 'dart:convert';
 
-import 'package:timoti_project/main.dart';
+import '/main.dart';
 
 Future<PayexPaymentJSON> fetchPayexPaymentApi(
   String token,

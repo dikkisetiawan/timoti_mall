@@ -3,8 +3,8 @@ import 'dart:typed_data';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:timoti_project/Screen-Size/Get-Device-Details.dart';
-import 'package:timoti_project/Screen-Size/WidgetSizeCalculation.dart';
+import '/Screen-Size/Get-Device-Details.dart';
+import '/Screen-Size/WidgetSizeCalculation.dart';
 
 class CustomIcon extends StatelessWidget {
   final String? imagePath;
@@ -47,8 +47,9 @@ class CustomIcon extends StatelessWidget {
             child: Image(
               fit: BoxFit.contain,
               image: (imageBase64 == null
-                  ? AssetImage(imagePath as String)
-                  : MemoryImage(imageBase64 as Uint8List)) as ImageProvider<Object>,
+                      ? AssetImage(imagePath as String)
+                      : MemoryImage(imageBase64 as Uint8List))
+                  as ImageProvider<Object>,
             ),
           ),
         if (urlLink != '')
@@ -70,9 +71,8 @@ class CustomIcon extends StatelessWidget {
             maxLines: 2,
             style: TextStyle(
               color: textColor,
-              fontSize: textSize != 0
-                  ? textSize
-                  : deviceDetails.getNormalFontSize(),
+              fontSize:
+                  textSize != 0 ? textSize : deviceDetails.getNormalFontSize(),
               fontWeight: FontWeight.w400,
             ),
             textAlign: TextAlign.center,
