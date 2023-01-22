@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "731155814862",
+    "firebase_url": "https://stagingenvironmenttimoti-default-rtdb.firebaseio.com",
+    "project_id": "stagingenvironmenttimoti",
+    "storage_bucket": "stagingenvironmenttimoti.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731155814862:android:095c3a0ed01a4f95e2339f",
+        "android_client_info": {
+          "package_name": "com.timotistaging.timoti_app_staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731155814862-hbok8ineu5sq9d5lp76kvgp5sbaupnj9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH-NbaQ32MzFoWmwKZcuG_YviFRa7aPcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731155814862-hbok8ineu5sq9d5lp76kvgp5sbaupnj9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "staging timoti": "stagingenvironmenttimoti",
+    "production timoti": "timotimall"
+  },
+  "targets": {}
+}

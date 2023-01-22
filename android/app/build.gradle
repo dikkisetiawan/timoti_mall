@@ -24,6 +24,7 @@ if (flutterVersionName == null) {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion flutter.compileSdkVersion
@@ -51,6 +52,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -60,6 +62,26 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    flavorDimensions "app"
+
+    productFlavors{
+        "Production"{
+            dimension "app"
+            applicationId "com.example.timoti_mall"
+            manifestPlaceholders.appName = "Timoti"
+        }
+        "Staging"{
+            dimension "app"
+            applicationId "com.timotistaging.timoti_app_staging"
+            manifestPlaceholders.appName = "Staging Timoti"
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
 }
 
 flutter {
@@ -68,4 +90,7 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.android.support:multidex:1.0.3'
 }

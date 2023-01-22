@@ -1,0 +1,113 @@
+rules_version = '2';
+ service cloud.firestore {
+    match /databases/{database}/documents {
+    /// All Document Access
+     match /{document=**} {
+       allow read: if get(/databases/$(database)/documents/Agent/0).data.Roles == "SuperAdmin" && get(/databases/$(database)/documents/Agent/0).data.User_ID == request.auth.uid;
+       allow write: if get(/databases/$(database)/documents/Agent/0).data.Roles == "SuperAdmin"&& get(/databases/$(database)/documents/Agent/0).data.User_ID == request.auth.uid;
+      }
+      
+    // Customers ===================================
+    // Allow User to update their own data in Customer Collections
+   	match /Customers/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow update: if (!request.resource.data.diff(resource.data).affectedKeys()
+        .hasAny(['walletAmount', 'Updated_At'])) && request.auth != null && request.auth.uid == userId;
+      allow create: if (!request.resource.data.keys().hasAny(
+        ['walletAmount'])) && request.auth != null;
+    }
+    
+    // Allow User to read their own data in Statement Collection
+    match /Customers/{user}/Statement/{statement}{
+      allow read: if request.auth != null && 
+      get(/databases/$(database)/documents/Customers/$(user)).data.Customer_ID == request.auth.uid;
+    }
+    
+    
+    // Allow User to update their own data in Voucher Collection
+    match /Customers/{user}/Voucher/{voucher}{
+      allow read, create: if request.auth != null && 
+      get(/databases/$(database)/documents/Customers/$(user)).data.Customer_ID == request.auth.uid;
+    }
+    
+    // Allow User to read own data in Payments Collections
+    match /Payments/{payments} {
+      allow read: if request.auth != null && resource.data.UserId == request.auth.uid;
+    }
+    
+    // Allow User to read own data in Topups Collections
+    match /Topups/{topups} {
+      allow read: if request.auth != null && resource.data.UserId == request.auth.uid;
+    }
+    
+    // Cart =========================================
+    // Allow User to update their own data in Cart Collections
+    match /Cart/{cart} {
+      allow read, update, delete: if request.auth != null && resource.data.User_ID == request.auth.uid;
+      allow create: if request.auth != null;
+    }
+    // Allow User to read their own data in CartDetails Collections
+    match /CartDetails/{cartDetails} {
+      allow read, update, delete: if (get(/databases/$(database)/documents/Cart/$(resource.data.Cart_ID)).data.User_ID) 
+      == (get(/databases/$(database)/documents/Customers/$(request.auth.uid)).data.Customer_ID);
+      allow create: if request.auth != null;
+    }
+    
+    // Orders =========================================
+    // Allow User to read their own data in Orders Collections
+    match /Orders/{order} {
+      allow read: if request.auth != null && resource.data.Customer_ID == request.auth.uid;
+    }
+    
+    // Allow User to read their own data in Order Details Collections
+    match /Order%20Details/{orderDetail} {
+      // allow read: if request.auth != null;
+      allow read: if (get(/databases/$(database)/documents/Orders/$(resource.data.Order_ID)).data.Customer_ID) 
+      == (get(/databases/$(database)/documents/Customers/$(request.auth.uid)).data.Customer_ID);
+    }
+    
+    // Public Access for Auth User ========================
+      // Allow User to read Delivery Hours Doc in Delivery Hours Collections
+   	match /Delivery_Hours/{delivery_Hours}{
+      allow read: if request.auth != null;
+    }
+     // Allow User to read Shipping Coverage Doc in Delivery Hours Collections
+   	match /ShippingCoverage/{shippingCoverage}{
+      allow read: if request.auth != null;
+    }
+     // Allow User to read & write Promotion_Voucher Doc in Promotion_Voucher Collections
+   	match /Promotion_Voucher/{promotion_Voucher}{
+      allow read: if request.auth != null;
+      allow write: if request.auth != null; /// Update the existing field 
+    }
+    // Allow User to read AppVersion Doc in AppVersion Collections
+   	match /AppVersion/{appversion}{
+      allow read: if request.auth != null;
+    }
+   
+    // Allow User to read Message Collections
+   	match /Message/{message} {
+      allow read: if request.auth != null;
+    }
+    // Allow User to read Branch Collections
+   	match /Branches/{branch} {
+      allow read: if request.auth != null;
+    }
+    // Allow User to read Section Collections 
+   	match/Section/{section}{
+      allow read: if request.auth != null;
+    }
+    // Allow User to read Product_Collections Collection
+   	match /Product_Collections/{productCollections} {
+      allow read: if request.auth != null;
+    }
+    // Allow User to read Product Collections
+   	match /Products/{product} {
+      allow read: if request.auth != null;
+    }
+    // Allow User to read TemplateDesignCustomize Collections
+   	match /TemplateDesignCustomize/{design} {
+      allow read: if request.auth != null;
+    }
+   }
+}

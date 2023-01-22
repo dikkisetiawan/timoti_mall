@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "267356372756",
+    "firebase_url": "https://timotimall.firebaseio.com",
+    "project_id": "timotimall",
+    "storage_bucket": "timotimall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267356372756:android:e12ad3d4930e1e74a0cc01",
+        "android_client_info": {
+          "package_name": "com.timoti.timoti_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267356372756-f0qsml01tm62dsglnkm1n3srdvgo3rcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGL53LSNhK02YlPw_qSmmu9WLFwmi83z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267356372756-f0qsml01tm62dsglnkm1n3srdvgo3rcr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
