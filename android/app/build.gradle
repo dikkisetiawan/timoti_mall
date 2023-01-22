@@ -48,7 +48,7 @@ android {
         applicationId "com.timoti.timoti_project"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-        minSdkVersion 19
+        minSdkVersion 20
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -60,21 +60,6 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
-        }
-    }
-
-    flavorDimensions "app"
-
-    productFlavors{
-        "Production"{
-            dimension "app"
-            applicationId "com.timoti.timoti_project"
-            manifestPlaceholders.appName = "Timoti"
-        }
-        "Staging"{
-            dimension "app"
-            applicationId "com.timotistaging.timoti_app_staging"
-            manifestPlaceholders.appName = "Staging Timoti"
         }
     }
 
@@ -94,3 +79,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.android.support:multidex:1.0.3'
 }
+
+
