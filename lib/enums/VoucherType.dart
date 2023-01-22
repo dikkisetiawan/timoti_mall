@@ -1,0 +1,4 @@
+enum VoucherValueType {
+  Percentage,
+  Value,
+}
